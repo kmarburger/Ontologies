@@ -24,27 +24,23 @@ nvo:IndoorVelocity a owl:Class ;
   rdfs:label "Simulated Indoor Velocity"@en ;
   rdfs:iisDefinedby nvvo: .
 
-nvo:BoundaryCondition a owl:Class ;
-  rdfs:label "BoundaryCondition"@en;
-  rdfs:isDefinedBy nvo: .
-
 nvo:OutdoorVelocity a owl:Class;
-  rdfs:subClassOf nvo:BoundaryCondition;
+  rdfs:subClassOf rsot:BoundaryCondition;
   rdfs:label "OutdoorVelocity"@en;
   rdfs:isDefinedBy nvo: .
 
 nvo:OutdoorTemperature a owl:Class;
-  rdfs:subClassOf nvo:BoundaryCondition;
+  rdfs:subClassOf rsot:BoundaryCondition;
   rdfs:label "OutdoorTemperature"@en;
   rdfs:isDefinedBy nvo: .
 
 nvo:DistanceFromWindow a owl:Class;
-  rdfs:subClassOf nvo:BoundaryCondition;
+  rdfs:subClassOf rsot:BoundaryCondition;
   rdfs:label "DistanceFromWindow"@en;
   rdfs:isDefinedBy nvo: .
 
 nvo:TimeStep a owl:Class;
-  rdfs:subClassOf nvo:BoundaryCondition;
+  rdfs:subClassOf rsot:BoundaryCondition;
   rdfs:label "TimeStep"@en;
   rdfs:isDefinedBy nvo: .
 

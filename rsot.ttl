@@ -29,6 +29,10 @@ rsot:SpeckleObject a owl:Class;
     rdfs:label "URL to Speckle object"@en;
     rdfs:isDefinedBy rsot: .
 
+nvo:BoundaryCondition a owl:Class ;
+  rdfs:label "BoundaryCondition"@en;
+  rdfs:isDefinedBy nvo: .
+
 #Coordinates and measurements
 
 rsot:Distance a owl:Class;
@@ -225,6 +229,13 @@ rsot:hasUvalue a owl:DatatypeProperty ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
+rsot:hasBoundaryCondition a owl:ObjectProperty ;
+    rdfs:label "Boundary condition for a simulation"@en ;
+    rdfs:rangeIncludes
+        rsot:BoundaryCondition ;
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy rsot:
+
 #####################
 # Labels and comments
 #####################
@@ -255,3 +266,6 @@ rsot:WFR rdfs:comment
 
 rsot:hasWFR rdfs:comment
         "The relationship between a roomtype/geomtry and the window floor ratio."@en .
+
+rsot:hasBoundaryCondition rdfs:comment 
+        "the relationship between a result and any boundary condition. Many boundary conditions are described in other ontologies"@en .
