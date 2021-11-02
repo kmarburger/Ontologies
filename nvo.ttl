@@ -1,0 +1,141 @@
+# This work was created by Anna Krusell and Kristine Marburger at the Techical University of Denmark 
+# The ontology was developed in connection with the master thesis 'Graph databases for optimisation
+# and design exploration with regards to indoor climate' in the autumn of 2021. 
+# NVO uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix rsot:    <https://example.com/terms#> .
+@prefix nvo:    <https://example.com/terms2#> .
+@prefix rdfs:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    <https://www.w3.org/TR/owl-ref/>.
+@prefix bot:    <https://w3id.org/bot#> .
+@prefix qudt:   <http://qudt.org/schema/qudt/> .
+@prefix schema: <http://schema.org/> .
+
+########
+#CLASSES
+########
+
+nvo:IndoorVelocity a owl:Class ;
+  rdfs:subClassOf rsot:Result ;
+  rdfs:label "Simulated Indoor Velocity"@en ;
+  rdfs:iisDefinedby nvvo: .
+
+nvo:BoundaryCondition a owl:Class ;
+  rdfs:label "BoundaryCondition"@en;
+  rdfs:isDefinedBy nvo: .
+
+nvo:OutdoorVelocity a owl:Class;
+  rdfs:subClassOf nvo:BoundaryCondition;
+  rdfs:label "OutdoorVelocity"@en;
+  rdfs:isDefinedBy nvo: .
+
+nvo:OutdoorTemperature a owl:Class;
+  rdfs:subClassOf nvo:BoundaryCondition;
+  rdfs:label "OutdoorTemperature"@en;
+  rdfs:isDefinedBy nvo: .
+
+nvo:DistanceFromWindow a owl:Class;
+  rdfs:subClassOf nvo:BoundaryCondition;
+  rdfs:label "DistanceFromWindow"@en;
+  rdfs:isDefinedBy nvo: .
+
+nvo:TimeStep a owl:Class;
+  rdfs:subClassOf nvo:BoundaryCondition;
+  rdfs:label "TimeStep"@en;
+  rdfs:isDefinedBy nvo: .
+
+######
+#EDGES
+######
+
+nvo:simulatedOutdoorV a owl:DatatypeProperty ;
+  rdfs:label "Simulated outdoor velocity"@en ;
+  rdfs:range xsd:decimal ;
+  qudt:ucumCode "m/s" ;
+  rdfs:range nvo:OutdoorVelocity ;
+  schema:domainIncludes
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy nvo: .
+
+nvo:simlatedOutdoorT a owl:DatatypeProperty ;
+  rdfs:label "Simulated outdoor temperature"@en ;
+  rdfs:range xsd:decimal ;
+  qudt:ucumCode "cel (1 K)" ;
+  rdfs:range nvo:OutdoorTemperature ;
+  schema:domainIncludes
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy nvo: .
+
+nvo:simulatedDistance a owl:DatatypeProperty ;
+  rdfs:label "Simulated distance from window"@en ;
+  rdfs:range nvo:DistanceFromWindow ;
+  rdfs:range xsd:decimal ;
+  qudt:ucumCode "m" ;
+  schema:domainIncludes
+    rsot:Result ;
+  schema:rangeIncludes
+    nvo:DistanceFromWindow ;
+  rdfs:isDefinedBy nvo: .
+
+nvo:simulatedTimeStep a owl:ObjectProperty ;
+  rdfs:label "Simulated timestep"@en ;
+  rdfs:range nvo:DistanceFromWindow ;
+  rdfs:range xsd:decimal ;
+  qudt:ucumCode "s" ;
+  rdfs:range nvo:TimeStep;
+  schema:domainIncludes
+    rsot:Result ;
+  schema:rangeIncludes
+    nvo:TimeStep ;
+  rdfs:isDefinedBy nvo: .
+
+
+#####################
+# Labels and comments
+#####################
+
+nvo:BoundaryCondition rdfs:comment
+    "A class that can be used to assign any type of boundary condition. The other nvo: classes are rdfs:subClassOf nvo:BoundaryCondition."@en .
+
+nvo:OutdoorVelocity rdfs:comment
+    "The outdoor velocity, the unit can be assigned using rsot:defaultUnit. Subclass of boundary condition. "@en .
+
+nvo:simulatedOutdoorV rdfs:comment
+    "The relationship used to assign the outdoor velocity to a result."@en .
+
+nvo:OutdoorTemperature rdfs:comment
+    "The outdoor temperature, the unit can be assigned using rsot:defaultUnit. Subclass of boundary condition. "@en .
+
+nvo:simulatedOutdoorT rdfs:comment
+    "The relationship used to assign the outdoor temperature to a result."@en .
+
+nvo:DistanceFromWindow rdfs:comment
+    "The distance measured from the centre of the opening area, to the measurement point. The unit can be assigned using rsot:defaultUnit. Subclass of boundary condition. "@en .
+
+nvo:simulatedDistance rdfs:comment
+    "The relationship used to define the distance the the window."@en .
+
+nvo:Height rdfs:comment
+    "The height of the measurement point, measured from the top of the floor. The unit can be assigned using rsot:defaultUnit Subclass of boundary condition. "@en .
+
+nvo:simulatedHeight rdfs:comment
+    "The relationship used to define the height of the measurement point."@en .
+
+nvo:TimeStep rdfs:comment
+    "The timestep that the result has been simulated for. Subclass of boundary condition. "@en .
+
+nvo:simulatedTimeStep rdfs:comment
+    "The relationship used to define the timestep to a result."@en .
+
+
+
+
+
+
+
+
+
+

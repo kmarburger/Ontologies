@@ -1,0 +1,205 @@
+# This work was created by Anna Krusell and Kristine Marburger at the Techical University of Denmark 
+# The ontology was developed in connection with the master thesis 'Graph databases for optimisation
+# and design exploration with regards to indoor climate' in the autumn of 2021. 
+# DSO uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix rsot:    <https://example.com/terms#> .
+@prefix dso:    <https://example.com/terms3#> .
+@prefix rdfs:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    <https://www.w3.org/TR/owl-ref/>.
+@prefix bot:    <https://w3id.org/bot#> .
+@prefix qudt:   <http://qudt.org/schema/qudt/> .
+@prefix schema: <http://schema.org/> .
+@prefix gn:     <https://www.geonames.org/ontology/ontology_v3.3.rdf> .
+
+########
+# CLASSES
+########
+
+dso:DaylightFactor a owl:Class;
+    rdfs:subClassOf rsot:Result ;
+    rdfs:label "Daylight Factor. A percentage of the amount of daylight available in a zone compared to outside (overcast)."@en ;
+    rdfs:range xsd:decimal ;
+    qudt:ucumCode "%" ;
+    rdfs:isDefinedBy dso: .
+
+dso:UDIAcheived a owl:Class;
+    rdfs:subClassOf rsot:Result ;
+    rdfs:label "Useful Daylight Illuminance. Percentage of time between 100-2000lux at a point"@en ;
+    rdfs:range xsd:decimal ;
+    qudt:ucumCode "%" ;
+    rdfs:isDefinedBy dso: .
+
+dso:UDIFellShort a owl:Class;
+    rdfs:subClassOf rsot:Result ;
+    rdfs:label "Useful Daylight Illuminance. Percentage of time less than 100lux at a point"@en ;
+    rdfs:range xsd:decimal ;
+    qudt:ucumCode "%" ;
+    rdfs:isDefinedBy dso: .
+
+dso:UDIExceeded a owl:Class;
+    rdfs:subClassOf rsot:Result ;
+    rdfs:label "Useful Daylight Illuminance. Percentage of time with more than 2000lux at a point"@en ;
+    rdfs:range xsd:decimal ;
+    qudt:ucumCode "%" ;
+    rdfs:isDefinedBy dso: .
+
+dso:DaylightAutonomy a owl:Class;
+    rdfs:subClassOf rsot:Result ;
+    rdfs:label "Daylight Autonomy. A percentage of time where a target illuminance of 300lux"@en ;
+    rdfs:range xsd:decimal ;
+    qudt:ucumCode "%" ;
+    rdfs:isDefinedBy dso: .
+
+dso:SpatialDaylightAutonomy a owl:Class;
+    rdfs:subClassOf rsot:Result ;
+    rdfs:label "Spatial Daylight Autonomy (average of a zone), at a target illuminance of 300lux"@en ;
+    rdfs:range xsd:decimal ;
+    qudt:ucumCode "%" ;
+    rdfs:isDefinedBy dso: .
+
+dso:WeatherDataLocation a owl:Class;
+    rdfs:subClassOf gn:Feature, rsot:BoundaryCondition;
+    rdfs:label "Location chosen for simulation"@en ;
+    rdfs:isDefinedBy dso: .
+
+dso:WeatherDataYear a owl:Class;
+    rdfs:subClassOf rsot:BoundaryCondition ;
+    rdfs:label "Year chosen for simulation"@en ;
+    rdfs:range xsd:decimal ;
+    rdfs:isDefinedBy dso: .
+
+dso:RGBReflectance a owl:Class;
+    rdfs:subClassOf rsot:BoundaryCondition ;
+    rdfs:label "The RGB reflectances for a given surface (WKT point)"@en ;
+    rdfs:range xsd:decimal ;
+    rdfs:isDefinedBy dso: .
+
+#######
+# EDGES
+#######
+
+dso:simulatedDaylightFactor a owl:DatatypeProperty ;
+  rdfs:label "Simulated Daylight Factor. A percentage of the amount of daylight available in a zone compared to outside (overcast)."@en ;
+  rdfs:range xsd:decimal ;
+  schema:domainIncludes
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy dso: .
+
+dso:simulatedAverageDaylightFactor a owl:DatatypeProperty ;
+  rdfs:label "Simulated Average Daylight Factor (average of a zone)"@en ;
+  rdfs:range xsd:decimal ;
+  schema:domainIncludes
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy dso: .
+
+dso:simulatedUDIAcheived a owl:DatatypeProperty ;
+  rdfs:label "Simulated percentage of time between 100-2000lux at a point."@en ;
+  rdfs:range xsd:decimal ;
+  schema:domainIncludes
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy dso: .
+
+dso:simulatedUDIFellShort a owl:DatatypeProperty ;
+  rdfs:label "Simulated  percentage of time with more than 2000lux at a point"@en ;
+  rdfs:range xsd:decimal ;
+  schema:domainIncludes
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy dso: .
+
+dso:simulatedUDIExceeded a owl:DatatypeProperty ;
+  rdfs:label "Simulated percentage of time with more than 2000lux at a point"@en ;
+  rdfs:range xsd:decimal ;
+  schema:domainIncludes
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy dso: .
+
+dso:simulatedDaylightAutonomy a owl:DatatypeProperty ;
+  rdfs:label "Simulated Daylight Autonomy (at a point), at a target illuminance of 300lux"@en ;
+  rdfs:range xsd:decimal ;
+  schema:domainIncludes
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy dso: .
+
+dso:simulatedSpatialDaylightAutonomy a owl:DatatypeProperty ;
+  rdfs:label "Simulated Spatial Daylight Autonomy (average of a zone), at a target illuminance of 300lux"@en ;
+  rdfs:range xsd:decimal ;
+  schema:domainIncludes
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy dso: .
+
+dso:simulatedLocation a owl:ObjectProperty ;
+    rdfs:label "Simulated Location"@en ;
+    rdfs:range xsd:string ;
+    scema:rangeIncludes
+        dso:WeatherDataLocation ;
+    schema:domainIncludes
+        rsot:Result ; 
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy dso: .
+
+dso:simulatedYear a owl:DatatypeProperty;
+    rdfs:label "Year chosen for simulation"@en ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:isDefinedBy dso: .
+
+dso:hasRGBReflectance a owl:DatatypeProperty ;
+    rdfs:label "RGB Reflectance, 3 numbers between 0 and 1 (WKT point)"@en ;
+    schema:domainIncludes
+        rsot:Result ; 
+    rdfs:range xsd:point ; 
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy dso: .
+
+##################
+# Window properties 
+##################
+
+dso:hasGValue a owl:DatatypeProperty ;
+    rdfs:label "G-value for the window"@en ;
+    schema:domainIncludes
+        rsot:Window ;
+    rdfs:range xsd:decimal ;
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy dso: .
+
+dso:hasGlazingTransmittance a owl:DatatypeProperty ;
+    rdfs:label "Light transmittance of glass/window"@en ;
+    schema:domainIncludes
+        rsot:Window ;
+    rdfs:range xsd:decimal ; 
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy dso: .
+
+dso:hasGlazingReflectance a owl:DatatypeProperty ;
+    rdfs:label "Glazing reflectance"@en ;
+    schema:domainIncludes
+        rsot:Window ;
+    rdfs:range xsd:decimal ;
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy dso: .
+
+dso:hasGlazingPercentage a owl:DatatypeProperty ;
+    rdfs:label "Percentage of glass in window"@en ;
+    schema:domainIncludes
+        rsot:Window ;
+    rdfs:range xsd:decimal ;
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy dso: .
+
+#####################
+# Labels and comments
+#####################
+
+dso:DaylightAutonomy rdfs:comment
+        "Daylight Autonomy is a daylight availability metric that correponds to the percentage of the occupied time when the target illuminance at a point in a space is met by daylight"@en .
+
+
