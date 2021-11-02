@@ -22,7 +22,7 @@
 nvo:IndoorVelocity a owl:Class ;
   rdfs:subClassOf rsot:Result ;
   rdfs:label "Simulated Indoor Velocity"@en ;
-  rdfs:iisDefinedby nvvo: .
+  rdfs:isDefinedby nvvo: .
 
 nvo:OutdoorVelocity a owl:Class;
   rdfs:subClassOf rsot:BoundaryCondition;
