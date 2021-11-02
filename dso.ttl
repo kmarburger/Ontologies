@@ -139,7 +139,7 @@ dso:simulatedSpatialDaylightAutonomy a owl:DatatypeProperty ;
 dso:simulatedLocation a owl:ObjectProperty ;
     rdfs:label "Simulated Location"@en ;
     rdfs:range xsd:string ;
-    scema:rangeIncludes
+    schema:rangeIncludes
         dso:WeatherDataLocation ;
     schema:domainIncludes
         rsot:Result ; 
