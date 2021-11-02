@@ -12,6 +12,8 @@
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix schema: <http://schema.org/> .
 @prefix gn:     <https://www.geonames.org/ontology/ontology_v3.3.rdf> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema> .
+
 
 ########
 # CLASSES

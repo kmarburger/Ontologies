@@ -11,6 +11,9 @@
 @prefix bot:    <https://w3id.org/bot#> .
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix schema: <http://schema.org/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema> .
+
+
 
 ########
 #CLASSES
