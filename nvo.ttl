@@ -24,23 +24,28 @@ nvo:IndoorVelocity a owl:Class ;
   rdfs:label "Simulated Indoor Velocity"@en ;
   rdfs:isDefinedby nvvo: .
 
+nvo:IndoorTemperature a owl:Class ;
+  rdfs:subClassOf rsot:Result ;
+  rdfs:label "Simulated Indoor Indoor Temperature"@en ;
+  rdfs:isDefinedby nvvo: .
+
 nvo:OutdoorVelocity a owl:Class;
-  rdfs:subClassOf rsot:BoundaryCondition;
+  rdfs:subClassOf rsot:BoundaryCondition ;
   rdfs:label "OutdoorVelocity"@en;
   rdfs:isDefinedBy nvo: .
 
 nvo:OutdoorTemperature a owl:Class;
-  rdfs:subClassOf rsot:BoundaryCondition;
+  rdfs:subClassOf rsot:BoundaryCondition ;
   rdfs:label "OutdoorTemperature"@en;
   rdfs:isDefinedBy nvo: .
 
 nvo:DistanceFromWindow a owl:Class;
-  rdfs:subClassOf rsot:BoundaryCondition;
+  rdfs:subClassOf rsot:Measure ;
   rdfs:label "DistanceFromWindow"@en;
   rdfs:isDefinedBy nvo: .
 
 nvo:TimeStep a owl:Class;
-  rdfs:subClassOf rsot:BoundaryCondition;
+  rdfs:subClassOf rsot:BoundaryCondition ;
   rdfs:label "TimeStep"@en;
   rdfs:isDefinedBy nvo: .
 
@@ -49,6 +54,7 @@ nvo:TimeStep a owl:Class;
 ######
 
 nvo:simulatedOutdoorV a owl:DatatypeProperty ;
+  rdfs:subPropertyOf rsot:hasBoundaryCondition ;
   rdfs:label "Simulated outdoor velocity"@en ;
   rdfs:range xsd:decimal ;
   qudt:ucumCode "m/s" ;
@@ -59,6 +65,7 @@ nvo:simulatedOutdoorV a owl:DatatypeProperty ;
   rdfs:isDefinedBy nvo: .
 
 nvo:simlatedOutdoorT a owl:DatatypeProperty ;
+  rdfs:subPropertyOf rsot:hasBoundaryCondition ;
   rdfs:label "Simulated outdoor temperature"@en ;
   rdfs:range xsd:decimal ;
   qudt:ucumCode "cel (1 K)" ;
@@ -69,6 +76,7 @@ nvo:simlatedOutdoorT a owl:DatatypeProperty ;
   rdfs:isDefinedBy nvo: .
 
 nvo:simulatedDistance a owl:DatatypeProperty ;
+  rdfs:subPropertyOf rsot:hasMeasure ;
   rdfs:label "Simulated distance from window"@en ;
   rdfs:range nvo:DistanceFromWindow ;
   rdfs:range xsd:decimal ;
@@ -80,6 +88,7 @@ nvo:simulatedDistance a owl:DatatypeProperty ;
   rdfs:isDefinedBy nvo: .
 
 nvo:simulatedTimeStep a owl:ObjectProperty ;
+  rdfs:subPropertyOf rsot:hasBoundaryCondition ;
   rdfs:label "Simulated timestep"@en ;
   rdfs:range nvo:DistanceFromWindow ;
   rdfs:range xsd:decimal ;
@@ -90,7 +99,6 @@ nvo:simulatedTimeStep a owl:ObjectProperty ;
   schema:rangeIncludes
     nvo:TimeStep ;
   rdfs:isDefinedBy nvo: .
-
 
 #####################
 # Labels and comments
@@ -128,13 +136,3 @@ nvo:TimeStep rdfs:comment
 
 nvo:simulatedTimeStep rdfs:comment
     "The relationship used to define the timestep to a result."@en .
-
-
-
-
-
-
-
-
-
-

@@ -78,6 +78,12 @@ dso:RGBReflectance a owl:Class;
     rdfs:range xsd:decimal ;
     rdfs:isDefinedBy dso: .
 
+dso:GlazingTransmittance a owl:Class;
+    rdfs:subClassOf rsot:BoundaryCondition ;
+    rdfs:label "The Transmittance of the glazing"@en ;
+    rdfs:range xsd:decimal ;
+    rdfs:isDefinedBy dso: .
+
 #######
 # EDGES
 #######
@@ -210,5 +216,4 @@ dso:hasGlazingPercentage a owl:DatatypeProperty ;
 
 dso:DaylightAutonomy rdfs:comment
         "Daylight Autonomy is a daylight availability metric that correponds to the percentage of the occupied time when the target illuminance at a point in a space is met by daylight"@en .
-
 
