@@ -141,6 +141,11 @@ rsot:hasRoomType a owl:DataTypeProperty ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
+rsot:hasSurface a owl:ObjectProperty;
+    rdfs:subPropertyOf bot:hasInterface;  
+    rdfs:label "An Indoor Surface"@en;
+    rdfs:isDefinedBy rsot: .
+
 #Coordinates and measurements
 rsot:hasMeasure a owl:ObjectProperty;
     rdfs:label "Measure"@en ; 
