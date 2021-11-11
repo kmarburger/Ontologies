@@ -14,6 +14,7 @@
 @prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix omg:    <https://www.projekt-scope.de/ontologies/omg/#Geometry> .
 @prefix cco:    <http://diarmuidr3d.github.io/cartCoord/> .
+@prefix gn:     <https://www.geonames.org/ontology/ontology_v3.3.rdf> .
 
 ##########
 # CLASSES
@@ -29,11 +30,6 @@ rsot:Result a owl:Class ;
     rdfs:subClassOf rsot:Measure ;
     rdfs:label "Result"@en;
     rdfs:range xsd:decimal ;
-    rdfs:isDefinedBy rsot: .
-
-rsot:Geometry a owl:Class ;
-    rdfs:subClassOf bot:Space ;
-    rdfs:label "Geometry"@en ;
     rdfs:isDefinedBy rsot: .
 
 rsot:SpeckleObject a owl:Class;
