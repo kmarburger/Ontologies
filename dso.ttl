@@ -152,6 +152,7 @@ dso:simulatedSpatialDaylightAutonomy a owl:DatatypeProperty ;
   rdfs:isDefinedBy dso: .
 
 dso:simulatedLocation a owl:ObjectProperty ;
+    rdfs:subPropertyOf gn:Feature ;
     rdfs:label "Simulated Location"@en ;
     rdfs:range xsd:string ;
     schema:rangeIncludes
@@ -162,11 +163,13 @@ dso:simulatedLocation a owl:ObjectProperty ;
     rdfs:isDefinedBy dso: .
 
 dso:simulatedYear a owl:DatatypeProperty;
+    rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "Year chosen for simulation"@en ;
     rdfs:range xsd:positiveInteger ;
     rdfs:isDefinedBy dso: .
 
 dso:hasRGBReflectance a owl:DatatypeProperty ;
+    rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "RGB Reflectance, 3 numbers between 0 and 1 (WKT point)"@en ;
     schema:domainIncludes
         rsot:Result ; 
@@ -179,6 +182,7 @@ dso:hasRGBReflectance a owl:DatatypeProperty ;
 ##################
 
 dso:hasGValue a owl:DatatypeProperty ;
+    rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "G-value for the window"@en ;
     schema:domainIncludes
         rsot:Window ;
@@ -187,6 +191,7 @@ dso:hasGValue a owl:DatatypeProperty ;
     rdfs:isDefinedBy dso: .
 
 dso:hasGlazingTransmittance a owl:DatatypeProperty ;
+    rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "Light transmittance of glass/window"@en ;
     schema:domainIncludes
         rsot:Window ;
@@ -195,6 +200,7 @@ dso:hasGlazingTransmittance a owl:DatatypeProperty ;
     rdfs:isDefinedBy dso: .
 
 dso:hasGlazingReflectance a owl:DatatypeProperty ;
+    rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "Glazing reflectance"@en ;
     schema:domainIncludes
         rsot:Window ;
@@ -203,6 +209,7 @@ dso:hasGlazingReflectance a owl:DatatypeProperty ;
     rdfs:isDefinedBy dso: .
 
 dso:hasGlazingPercentage a owl:DatatypeProperty ;
+    rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "Percentage of glass in window"@en ;
     schema:domainIncludes
         rsot:Window ;

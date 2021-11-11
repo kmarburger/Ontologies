@@ -12,6 +12,8 @@
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix schema: <http://schema.org/> .
 @prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix omg:    <https://www.projekt-scope.de/ontologies/omg/#Geometry> .
+@prefix cco:    <http://diarmuidr3d.github.io/cartCoord/> .
 
 ##########
 # CLASSES
@@ -40,7 +42,7 @@ rsot:SpeckleObject a owl:Class;
     rdfs:isDefinedBy rsot: .
 
 rsot:BoundaryCondition a owl:Class ;
-    rdfs:subClassOf rsot:measure ;
+    rdfs:subClassOf rsot:Measure ;
     rdfs:label "BoundaryCondition"@en;
     rdfs:isDefinedBy rsot: .
 
@@ -71,21 +73,16 @@ rsot:Height a owl:CLass;
     rdfs:isDefinedBy rsot: .
 
 rsot:Origin a owl:Class;
-    rdfs:subClassOf bot:Geometry;
+    rdfs:subClassOf cco:Point ;
     rdfs:label "Point of origin (WKT)"@en;
     rdfs:isDefinedBy rsot: . 
 
 rsot:Orientation a owl:Class;
-    rdfs:subClassOf bot:Geometry;
-    rdfs:label "Origin point of geometry"@en;
+    rdfs:subClassOf rsot:Measure;
+    rdfs:label "Orientation of element"@en;
     rdfs:isDefinedBy rsot: . 
 
 #Room geometry/construction
-
-rsot:RoomType a owl:Class;  
-    rdfs:subClassOf rsot:Geometry;
-    rdfs:label "RoomType"@en;
-    rdfs:isDefinedBy rsot: .
 
 rsot:WFR a owl:Class;
     rdfs:subClassOf rsot:Measure ;
@@ -105,18 +102,13 @@ rsot:Surface a owl:Class;
 
 #Room geometry/construction
 
-rsot:hasGeometry a owl:ObjectProperty ;
-    rdfs:subPropertyOf bot:hasSpace ;
-    rdfs:label "Geometry"@en ;
-    rdfs:isDefinedBy rsot: .
-
 rsot:simulatedRoom a owl:ObjectProperty  ;
-    rdfs:subPropertyOf rsot:hasGeometry ;
+    rdfs:subPropertyOf bot:Zone ;
     rdfs:label "Relationship between result and room geometry"@en ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasSpeckle a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:hasGeometry ;
+    rdfs:subPropertyOf omg:hasGeometry ;
     rdfs:label "Speckle object URL"@en ;
     rdfs:domainIncludes
         rsot:RoomType ;
@@ -134,7 +126,7 @@ rsot:hasWFR a owl:DatatypeProperty;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasRoomType a owl:DataTypeProperty ;
-    rdfs:subPropertyOf rsot:hasGeometry ;
+    rdfs:subPropertyOf omg:hasGeometry ;
     rdfs:label "has room type"@en ;
     rdfs:range xsd:string ;
     rdfs:range rsot:RoomType;
@@ -154,16 +146,9 @@ rsot:hasMeasure a owl:ObjectProperty;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasOrigin a owl:ObjectProperty;
-    rdfs:subPropertyOf rsot:hasMeasure ;
+    rdfs:subPropertyOf cco:hasPoint ;
     rdfs:label "Point of orgin (cartesian)"@en;
     rdfs:range xsd:string;
-    vs:term_status "stable";
-    rdfs:isDefinedBy rsot: .
-
-rsot:hasCoordinates a owl:DatatypeProperty;
-    rdfs:subPropertyOf rsot:hasGeometry ;
-    rdfs:label "Cartesian Coordinates for point"@en;
-    rdfs:range xsd:point;
     vs:term_status "stable";
     rdfs:isDefinedBy rsot: .
 
@@ -177,7 +162,7 @@ rsot:hasDistance a owl:DatatypeProperty ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasWidth a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:hasMeasure;
+    rdfs:subPropertyOf rsot:hasDistance ;
     rdfs:label "has width"@en ;
     rdfs:range xsd:decimal ;
     qudt:ucumCode "m" ;
@@ -185,7 +170,7 @@ rsot:hasWidth a owl:DatatypeProperty ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasDepth a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:hasMeasure;
+    rdfs:subPropertyOf rsot:hasDistance;
     rdfs:label "has depth"@en ;
     rdfs:range xsd:decimal ;
     qudt:ucumCode "m" ;
@@ -193,7 +178,7 @@ rsot:hasDepth a owl:DatatypeProperty ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasHeight a owl:DatatypeProperty ; 
-    rdfs:subPropertyOf rsot:hasMeasure ;
+    rdfs:subPropertyOf rsot:hasDistance ;
     rdfs:label "has Height"@en ;
     rdfs:range xsd:decimal ;
     qudt:ucumCode "m" ;
@@ -201,7 +186,7 @@ rsot:hasHeight a owl:DatatypeProperty ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasOrientation a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:hasGeometry ;
+    rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "Orientation"@en ;
     rdfs:domainIncludes
         bot:Element ;
@@ -212,7 +197,7 @@ rsot:hasOrientation a owl:DatatypeProperty ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasWallCenterPoint a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:hasGeometry ;
+    rdfs:subPropertyOf cco:hasPoint ;
     rdfs:label "Center point of wall, used for placement of windows"@en ;
     rdfs:range xsd:string ;
     rdfs:domainIncludes
@@ -221,7 +206,7 @@ rsot:hasWallCenterPoint a owl:DatatypeProperty ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasIfcCartesianPoint a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:hasGeometry ;
+    rdfs:subPropertyOf cco:hasPoint ;
     rdfs:label "2D point defined to place window in wall"@en ;
     rdfs:range xsd:point ; 
     rdfs:domainIncludes
@@ -232,6 +217,7 @@ rsot:hasIfcCartesianPoint a owl:DatatypeProperty ;
 #Simulation 
 
 rsot:simulatedResult a owl:DatatypeProperty  ;
+    rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:domainIncludes
         rsot:Result ;
     rdfs:label "Relationship between result ID and result"@en ;
