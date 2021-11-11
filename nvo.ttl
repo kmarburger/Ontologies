@@ -22,12 +22,12 @@
 nvo:IndoorVelocity a owl:Class ;
   rdfs:subClassOf rsot:Result ;
   rdfs:label "Simulated Indoor Velocity"@en ;
-  rdfs:isDefinedby nvvo: .
+  rdfs:isDefinedby nvo: .
 
 nvo:IndoorTemperature a owl:Class ;
   rdfs:subClassOf rsot:Result ;
   rdfs:label "Simulated Indoor Indoor Temperature"@en ;
-  rdfs:isDefinedby nvvo: .
+  rdfs:isDefinedby nvo: .
 
 nvo:OutdoorVelocity a owl:Class;
   rdfs:subClassOf rsot:BoundaryCondition ;
