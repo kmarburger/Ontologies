@@ -160,12 +160,12 @@ rsot:hasOrigin a owl:ObjectProperty;
     vs:term_status "stable";
     rdfs:isDefinedBy rsot: .
 
-rsot:hasCartesianCoordinates a owl:DatatypeProperty;
+rsot:hasCoordinates a owl:DatatypeProperty;
     rdfs:subPropertyOf rsot:hasGeometry ;
-    rdfs:label "Cartesian Coordinates for point (WKT)"@en;
+    rdfs:label "Cartesian Coordinates for point"@en;
     rdfs:range xsd:point;
     vs:term_status "stable";
-    rdfs:isDefinedBy rsot: .   
+    rdfs:isDefinedBy rsot: .
 
 rsot:hasDistance a owl:DatatypeProperty ;
     rdfs:subPropertyOf rsot:hasMeasure ;

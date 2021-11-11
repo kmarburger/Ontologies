@@ -26,7 +26,7 @@ dso:DaylightFactor a owl:Class;
     qudt:ucumCode "%" ;
     rdfs:isDefinedBy dso: .
 
-dso:UDIAcheived a owl:Class;
+dso:UDIAchieved a owl:Class;
     rdfs:subClassOf rsot:Result ;
     rdfs:label "Useful Daylight Illuminance. Percentage of time between 100-2000lux at a point"@en ;
     rdfs:range xsd:decimal ;
