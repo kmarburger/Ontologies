@@ -33,7 +33,7 @@ rsot:Result a owl:Class ;
     rdfs:isDefinedBy rsot: .
 
 rsot:SpeckleObject a owl:Class;
-    rdfs:subClassOf bot:Geometry;
+    rdfs:subClassOf omg:Geometry;
     rdfs:label "URL to Speckle object"@en;
     rdfs:isDefinedBy rsot: .
 
