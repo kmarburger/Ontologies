@@ -106,9 +106,14 @@ rsot:simulatedRoom a owl:ObjectProperty  ;
 rsot:hasSpeckle a owl:DatatypeProperty ;
     rdfs:subPropertyOf omg:hasGeometry ;
     rdfs:label "Speckle object URL"@en ;
-    rdfs:domainIncludes
-        rsot:RoomType ;
     rdfs:range xsd:string ;
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy rsot: .
+
+rsot:hasFloorArea a owl:DataTypeProperty ;
+    rdfs:subPropertyOf rsot:hasMeasure ;
+    rdfs:label "has internal floor area"@en ;
+    rdfs:range xsd:decimal ; 
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
@@ -116,8 +121,6 @@ rsot:hasWFR a owl:DatatypeProperty;
     rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "has Window Floor Ratio (WFR)"@en ;
     rdfs:range xsd:decimal ;
-    rdfs:domainIncludes
-        rsot:Roomtype ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
@@ -153,7 +156,14 @@ rsot:hasDistance a owl:DatatypeProperty ;
     rdfs:label "has Distance"@en ;
     rdfs:range xsd:decimal ;
     qudt:ucumCode "m" ;
-    rsot:standardUnit "m" ;
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy rsot: .
+
+rsot:hasVolume a owl:DataTypeProperty ;
+    rdfs:subPropertyOf rsot:hasMeasure ;
+    rdfs:label "has volume"@en ;
+    rdfs:range xsd:decimal ;
+    qudt:ucumCode "m^3" ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
@@ -214,7 +224,7 @@ rsot:hasTestSurface a owl:DataTypeProperty ;
     rdfs:subPropertyOf rsot:Measure ;
     rdfs:domainIncludes
         rsot:Result ;
-    rdfs:label "The test surface, can be given by a list of points(polyline) or a surface."
+    rdfs:label "The test surface, can be given by a list of points(polyline) or a surface."@en ;
     rdfs:isDefinedBy rsot: .
 
 #Simulation 
