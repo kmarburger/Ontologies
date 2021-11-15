@@ -210,6 +210,13 @@ rsot:hasIfcCartesianPoint a owl:DatatypeProperty ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
+rsot:hasTestSurface a owl:DataTypeProperty ;
+    rdfs:subPropertyOf rsot:Measure ;
+    rdfs:domainIncludes
+        rsot:Result ;
+    rdfs:label "The test surface, can be given by a list of points(polyline) or a surface."
+    rdfs:isDefinedBy rsot: .
+
 #Simulation 
 
 rsot:simulatedResult a owl:DatatypeProperty  ;
@@ -227,6 +234,8 @@ rsot:hasBoundaryCondition a owl:ObjectProperty ;
         rsot:BoundaryCondition ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
+
+
 
 #####################
 # Labels and comments
