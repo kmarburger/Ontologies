@@ -96,6 +96,10 @@ rsot:Surface a owl:Class;
     rdfs:label "An Indoor Surface"@en;
     rdfs:isDefinedBy rsot: .
 
+rsot:TestSurface a owl:Class;
+    rdfs:subClassOf omg:Geometry;
+    rdfs:label "A surface used to define an area related to a simulation result"@en;
+    rdfs:isDefinedBy rsot: .
 
 ########
 # EDGES
