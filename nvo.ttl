@@ -29,29 +29,45 @@ nvo:IndoorTemperature a owl:Class ;
   rdfs:label "Simulated Indoor Indoor Temperature"@en ;
   rdfs:isDefinedby nvo: .
 
-nvo:OutdoorVelocity a owl:Class;
+nvo:OutdoorVelocity a owl:Class ;
   rdfs:subClassOf rsot:BoundaryCondition ;
-  rdfs:label "OutdoorVelocity"@en;
+  rdfs:label "OutdoorVelocity"@en ;
   rdfs:isDefinedBy nvo: .
 
-nvo:OutdoorTemperature a owl:Class;
+nvo:OutdoorTemperature a owl:Class ;
   rdfs:subClassOf rsot:BoundaryCondition ;
-  rdfs:label "OutdoorTemperature"@en;
+  rdfs:label "OutdoorTemperature"@en ;
   rdfs:isDefinedBy nvo: .
 
-nvo:DistanceFromWindow a owl:Class;
+nvo:OpeningArea a owl:class ;
   rdfs:subClassOf rsot:Measure ;
-  rdfs:label "DistanceFromWindow"@en;
+  rdfs:label "Opening area"@en ;
   rdfs:isDefinedBy nvo: .
 
-nvo:TimeStep a owl:Class;
+nvo:DistanceFromWindow a owl:Class ;
+  rdfs:subClassOf rsot:Measure ;
+  rdfs:label "DistanceFromWindow"@en ;
+  rdfs:isDefinedBy nvo: .
+
+nvo:TimeStep a owl:Class ;
   rdfs:subClassOf rsot:BoundaryCondition ;
-  rdfs:label "TimeStep"@en;
+  rdfs:label "TimeStep"@en ;
   rdfs:isDefinedBy nvo: .
 
 ######
 #EDGES
 ######
+
+nvo:simulatedOpeningArea a owl:DatatypeProperty ;
+  rdfs:subPropertyOf rsot:hasBoundaryCondition ;
+  rdfs:label "Simulated opening area"@en ;
+  rdfs:range xsd:decimal ;
+  qudt:ucumCode "m^2" ;
+  rdfs:range nvo:OpeningArea ;
+  schema:domainIncludes
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy nvo: .
 
 nvo:simulatedOutdoorV a owl:DatatypeProperty ;
   rdfs:subPropertyOf rsot:hasBoundaryCondition ;
