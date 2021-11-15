@@ -28,18 +28,23 @@ rsot:Measure a owl:Class ;
 
 rsot:Result a owl:Class ;
     rdfs:subClassOf rsot:Measure ;
-    rdfs:label "Result"@en;
+    rdfs:label "Result"@en ;
     rdfs:range xsd:decimal ;
     rdfs:isDefinedBy rsot: .
 
-rsot:SpeckleObject a owl:Class;
-    rdfs:subClassOf omg:Geometry;
-    rdfs:label "URL to Speckle object"@en;
+rsot:SpeckleObject a owl:Class ;
+    rdfs:subClassOf omg:Geometry ;
+    rdfs:label "URL to Speckle object"@en ;
     rdfs:isDefinedBy rsot: .
 
 rsot:BoundaryCondition a owl:Class ;
     rdfs:subClassOf rsot:Measure ;
-    rdfs:label "BoundaryCondition"@en;
+    rdfs:label "BoundaryCondition"@en ;
+    rdfs:isDefinedBy rsot: .
+
+rsot:Context a owl:Class ;
+    rdfs:subClassOf omg:Geometry ;
+    rdfs:label "Context buildings/rooms"@en ;
     rdfs:isDefinedBy rsot: .
 
 #Coordinates and measurements
@@ -137,6 +142,14 @@ rsot:hasSurface a owl:ObjectProperty;
     rdfs:label "An Indoor Surface"@en;
     rdfs:isDefinedBy rsot: .
 
+rsot:hasContext a owl:ObjectProperty;
+    rdfs:subPropertyOf omg:hasGeometry ;
+    rdfs:label "Relationship between a room and a context geometry"@en ;
+    rdfs:rangeIncludes
+        rsot:Context ;
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy rsot: .
+
 #Coordinates and measurements
 rsot:hasMeasure a owl:ObjectProperty;
     rdfs:label "Measure"@en ; 
@@ -225,9 +238,18 @@ rsot:hasTestSurface a owl:DataTypeProperty ;
     rdfs:domainIncludes
         rsot:Result ;
     rdfs:label "The test surface, can be given by a list of points(polyline) or a surface."@en ;
+    vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
 #Simulation 
+
+rsot:simulatedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf rsot:BoundaryCondition ;
+    rdfs:domainIncludes 
+        rsot:Result ;
+    rdfs:label "Relationship between simulationist and result"@en ;
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy rsot: .
 
 rsot:simulatedResult a owl:DatatypeProperty  ;
     rdfs:subPropertyOf rsot:hasMeasure ;
@@ -235,6 +257,7 @@ rsot:simulatedResult a owl:DatatypeProperty  ;
         rsot:Result ;
     rdfs:label "Relationship between result ID and result"@en ;
     rdfs:range xsd:decimal ;
+    vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasBoundaryCondition a owl:ObjectProperty ;
