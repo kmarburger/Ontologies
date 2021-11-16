@@ -280,38 +280,38 @@ rsot:hasBoundaryCondition a owl:ObjectProperty ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
-
-
 #####################
 # Labels and comments
 #####################
 
+#Classes
 rsot:Result rdfs:comment
         "The simulated result. A simulated value, that can be assigned any unit. Boundary conditions can be assigned using the rsot: or nvo: ontologies, or by adding others."@en .
 
 rsot:RoomType rdfs:comment
         "etc."@en .
 
-rsot:simulatedRoom rdfs:comment
-        "This relationship between the simulated room type and the given result name/ID. The result ID should have defined relationships with all given boundary conditions."@en .
+rsot:Depth rdfs:comment
+        "The depth of the room, measured internally"@en .
+
+rsot:WFR rdfs:comment
+        "The window floor ratio, calculated by dividing the window area/opening area with the internal floor area."@en .
 
 rsot:Width rdfs:comment
         "The width of the room, measured internally..  "@en .
 
+#Edges
 rsot:hasWidth rdfs:comment
         "The relationship between a roomtype/geometry and the width."@en .
 
-rsot:Depth rdfs:comment
-        "The depth of the room, measured internally"@en .
-
 rsot:hasDepth rdfs:comment
         "The relationship between a roomtype/geometry and the depth."@en .
-
-rsot:WFR rdfs:comment
-        "The window floor ratio, calculated by dividing the window area/opening area with the internal floor area."@en .
 
 rsot:hasWFR rdfs:comment
         "The relationship between a roomtype/geometry and the window floor ratio."@en .
 
 rsot:hasBoundaryCondition rdfs:comment 
         "the relationship between a result and any boundary condition. Many boundary conditions are described in other ontologies"@en .
+
+rsot:simulatedRoom rdfs:comment
+        "This relationship between the simulated room type and the given result name/ID. The result ID should have defined relationships with all given boundary conditions."@en .
