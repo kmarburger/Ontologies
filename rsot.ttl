@@ -245,6 +245,14 @@ rsot:hasTestSurface a owl:DataTypeProperty ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
+rsot:hasCoordinates a owl:DataTypeProperty ;
+    rdfs:subPropertyOf cco:hasPoint ;
+    rdfs:label "Coordinates (x,y,z) of a point"@en ;
+    rdfs:domainIncludes  
+        rsot:Result ;
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy rsot: .
+
 #Simulation 
 
 rsot:simulatedBy a owl:ObjectProperty ;
