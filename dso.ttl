@@ -26,6 +26,12 @@ dso:DaylightFactor a owl:Class;
     qudt:ucumCode "%" ;
     rdfs:isDefinedBy dso: .
 
+dso:AverageDaylightFactor a owl:Class;
+    rdfs:subClassOf rsot:Result ;
+    rdfs:label "Average Daylight Factor. A percentage of the amount of daylight available in a zone compared to outside (overcast)."@en ;
+    rdfs:range xsd:decimal ;
+    rdfs:isDefinedBy dso: .
+
 dso:UDI_100_2000 a owl:Class;
     rdfs:subClassOf rsot:Result ;
     rdfs:label "Useful Daylight Illuminance. Percentage of time between 100-2000lux at a point"@en ;
