@@ -94,26 +94,24 @@ nvo:simlatedOutdoorT a owl:DatatypeProperty ;
 nvo:simulatedDistance a owl:DatatypeProperty ;
   rdfs:subPropertyOf rsot:hasMeasure ;
   rdfs:label "Simulated distance from window"@en ;
-  rdfs:range nvo:DistanceFromWindow ;
   rdfs:range xsd:decimal ;
   qudt:ucumCode "m" ;
   schema:domainIncludes
     rsot:Result ;
   schema:rangeIncludes
     nvo:DistanceFromWindow ;
+  vs:term_status "stable" ;
   rdfs:isDefinedBy nvo: .
 
-nvo:simulatedTimeStep a owl:ObjectProperty ;
+nvo:simulatedTimeStep a owl:DataTypeProperty ;
   rdfs:subPropertyOf rsot:hasBoundaryCondition ;
   rdfs:label "Simulated timestep"@en ;
-  rdfs:range nvo:DistanceFromWindow ;
   rdfs:range xsd:decimal ;
   qudt:ucumCode "s" ;
   rdfs:range nvo:TimeStep;
   schema:domainIncludes
     rsot:Result ;
-  schema:rangeIncludes
-    nvo:TimeStep ;
+  vs:term_status "stable" ;
   rdfs:isDefinedBy nvo: .
 
 #####################
