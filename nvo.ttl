@@ -69,7 +69,18 @@ nvo:simulatedOpeningArea a owl:DatatypeProperty ;
   vs:term_status "stable" ;
   rdfs:isDefinedBy nvo: .
 
-nvo:simulatedOutdoorV a owl:DatatypeProperty ;
+nvo:simulatedHeight a owl:DataTypeProperty ;
+  rdfs:subPropertyOf rsot:hasDistance ;
+  rdfs:label ""@en ;
+  rdfs:range xsd:decimal ;
+  qudt:ucumCode "m" ;
+  rdfs:range rsot:Height ;
+  rdfs:domainIncludes 
+    rsot:Result ;
+  vs:term_status "stable" ;
+  rdfs:isDefinedBy nvo: .
+
+nvo:simulatedOutdoorVelocity a owl:DatatypeProperty ;
   rdfs:subPropertyOf rsot:hasBoundaryCondition ;
   rdfs:label "Simulated outdoor velocity"@en ;
   rdfs:range xsd:decimal ;
@@ -80,7 +91,7 @@ nvo:simulatedOutdoorV a owl:DatatypeProperty ;
   vs:term_status "stable" ;
   rdfs:isDefinedBy nvo: .
 
-nvo:simlatedOutdoorT a owl:DatatypeProperty ;
+nvo:simlatedOutdoorTemperature a owl:DatatypeProperty ;
   rdfs:subPropertyOf rsot:hasBoundaryCondition ;
   rdfs:label "Simulated outdoor temperature"@en ;
   rdfs:range xsd:decimal ;

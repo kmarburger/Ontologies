@@ -73,9 +73,9 @@ rsot:Height a owl:CLass;
     rdfs:range xsd:decimal ;
     rdfs:isDefinedBy rsot: .
 
-rsot:Origin a owl:Class;
+rsot:hasRoomCenterPoint a owl:Class;
     rdfs:subClassOf cco:Point ;
-    rdfs:label "Point of origin (WKT)"@en;
+    rdfs:label "Point of origin for the room geometry (given as the room centre point)"@en;
     rdfs:isDefinedBy rsot: . 
 
 rsot:Orientation a owl:Class;
@@ -161,7 +161,7 @@ rsot:hasMeasure a owl:ObjectProperty;
     vs:term_status "stable";
     rdfs:isDefinedBy rsot: .
 
-rsot:hasOrigin a owl:ObjectProperty;
+rsot:hasRoomCenterPoint a owl:ObjectProperty;
     rdfs:subPropertyOf cco:hasPoint ;
     rdfs:label "Point of orgin (cartesian)"@en;
     rdfs:range xsd:string;
