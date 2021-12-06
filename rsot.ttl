@@ -331,16 +331,16 @@ rsot:WFR rdfs:comment
 ######
 
 #Coordinates and measurements
-rsot:hasMeasure a owl:ObjectProperty;
+rsot:hasMeasure rdfs:comment
         "The edge rsot:hasMeasure should be used to define the relationship between a simulated result and any physical/simulated/assument measure that related to the rsot:Result. It is defined as an owl:DataTypeProperty"@en . 
 
-rsot:hasRoomCenterPoint a owl:ObjectProperty;
+rsot:hasRoomCenterPoint rdfs:comment
         "The edge rsot:hasRoomCenterPoint defines the relationship between a room and its centerpoint. The centerpoint is imortant to include for the visualisation of results in the future. it is defined as an owl:subbPropertyOf rsot:hasMeasure."@en .
 
-rsot:hasDistance a owl:DatatypeProperty ;
+rsot:hasDistance rdfs:comment
         "The edge:hasDistance defines the relationship between any measured or simulated distance and the simulated result or geomtry. The unit is defined as meters, and it is an owl:subPropertyOf rsot:hasMeasure."@en .
 
-rsot:hasVolume a owl:DataTypeProperty ;
+rsot:hasVolume rdfs:comment
         "The edge rsot:hasVolume defines the relationship between any measured or simulated volume and the simulated reuslt or geomtry. The unit i defined and (m^3), and it is an owl:subPropertyOf rsot:Measure."@en .
 
 rsot:hasWidth rdfs:comment
@@ -349,22 +349,22 @@ rsot:hasWidth rdfs:comment
 rsot:hasDepth rdfs:comment
         "The relationship between a roomtype/geometry and the depth. It is defined as an owl:subPropertyOf rsot:hasDistance."@en .
 
-rsot:hasHeight a owl:DatatypeProperty ; 
+rsot:hasHeight rdfs:comment
         "The relationshiip between a roomtype/geometry and it's corresponding height. It is defined as an owl:subPropertyOf rsot:hasDistance."@en .
 
-rsot:hasOrientation a owl:DatatypeProperty ;
+rsot:hasOrientation rdfs:comment
         "The relationship between a room/geomtry/window opening and its corresponding orientation. The orientation should be given in degrees. It is defined as an owl:subPropertyOf rsot:hasMeasure."@en .
 
-rsot:hasWallCenterPoint a owl:DatatypeProperty ;
+rsot:hasWallCenterPoint rdfs:comment
         "The edge rsot:hasWallCenterPoint defines the relationship between a wall and is centre point (x,y,z). This point is essential to ensure that any windows will be placed correctly in the wall."@en .
 
-rsot:hasIfcCartesianPoint a owl:DatatypeProperty ;
+rsot:hasIfcCartesianPoint rdfs:comment
         "The edge rsot:hasIfcCartesianPoint is an edge used to define any bot:SubElement's placement in/on a wall. It should be gived in two dimentsions (x,y), and will be placed according to a walls centre point. This is the same method used in IFC modelling."@en .
 
-rsot:hasTestSurface a owl:DataTypeProperty ;
+rsot:hasTestSurface rdfs:comment
         "The edge rsot:hasTestSurface us an edge used to define the reltionship between a testsurface and is corresponding geometry and/or simulated result. "@en .
 
-rsot:hasCoordinates a owl:DataTypeProperty ;
+rsot:hasCoordinates rdfs:comment
         "The edge rsot:hasCoordinates is an edge used to define the relationship between any set of coordinates and their corresponding result or geomtry."@en .
 
 rsot:hasBoundaryCondition rdfs:comment 
