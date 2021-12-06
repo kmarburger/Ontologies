@@ -137,7 +137,6 @@ nvo:simulatedTimeStep a owl:DataTypeProperty ;
 
 nvo:IndoorVelocity rdfs:comment
     "The simulated indoor velocity. The value can be both simulated or it can be an assumed value, used to generate other types of results. For natural ventilation simulations, the value should represent a simulated value, given in the unit m/s."@en .
-    "Den simulatede indendørs lufthastighed. Værdien kan være både simuleret (CFD) eller en antaget værdi, der er blevet brugt til at udføre en anden type simulering"@dk .
 
 nvo:IndoorTemperature rdfs:comment
     "The simulated indoor temerpature. The value can be both a simulated or assumed value, used to generate other types of results. For natural ventilation simulations the value should represent a simulated value, given in degrees celsius."@en . 
