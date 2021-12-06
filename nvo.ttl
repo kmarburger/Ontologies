@@ -12,7 +12,7 @@
 @prefix qudt:   <http://qudt.org/schema/qudt/> .
 @prefix schema: <http://schema.org/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema> .
-
+@prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
 
 ########
