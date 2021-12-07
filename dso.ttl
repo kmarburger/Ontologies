@@ -223,6 +223,16 @@ dso:hasGlazingPercentage a owl:DatatypeProperty ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy dso: .
 
+dso:hasIfcCartesianPoint a owl:DatatypeProperty ;
+    rdfs:subPropertyOf cco:hasPoint ;
+    rdfs:label "2D point defined to place window in wall"@en ;
+    rdfs:range xsd:point ; 
+    rdfs:domainIncludes
+        bot:Element ;
+    vs:term_status "stable" ;
+    rdfs:isDefinedBy dso: .
+
+
 #####################
 # Labels and comments
 #####################
