@@ -33,6 +33,20 @@ nvo:IndoorTemperature a owl:Class ;
     rsot:Result ; 
   rdfs:isDefinedby nvo: .
 
+nvo:AverageIndoorVelocity a owl:Class ;
+  rdfs:subClassOf rsot:Result ;
+  rdfs:label "Average simulated indoor velocity"@en ;
+  rdfs:range
+    rsot:Result ; 
+  rdfs:isDefinedby nvo: .
+
+nvo:AverageIndoorTemperature a owl:Class ;
+  rdfs:subClassOf rsot:Result ;
+  rdfs:label "Average simulated Indoor temperature"@en ;
+  rdfs:range
+    rsot:Result ; 
+  rdfs:isDefinedby nvo: .
+
 nvo:OutdoorVelocity a owl:Class ;
   rdfs:subClassOf rsot:BoundaryCondition ;
   rdfs:label "OutdoorVelocity"@en ;
