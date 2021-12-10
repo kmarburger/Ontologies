@@ -32,6 +32,8 @@ rsot:Result a owl:Class ;
     rdfs:range xsd:decimal ;
     rdfs:isDefinedBy rsot: .
 
+
+
 rsot:SpeckleObject a owl:Class ;
     rdfs:subClassOf omg:Geometry ;
     rdfs:label "Speckle Object"@en ;
@@ -155,6 +157,18 @@ rsot:hasContext a owl:ObjectProperty;
     rdfs:isDefinedBy rsot: .
 
 #Coordinates and measurements
+rsot:maximumSimulatedValue a owl:DataTypeProperty ;
+    rdfs:subbClassOf rsot:hasResult ;
+    rdfs:label "The maximum result from"@en ;
+    rdfs:range xds:decimal ;
+    rdfs:isDefinedBy rsot: .
+
+rsot:minimumSimulatedValue a owl:DataTypeProperty ;
+    rdfs:subbClassOf rsot:hasResult ;
+    rdfs:label "The minimum result from"@en ;
+    rdfs:range xds:decimal ;
+    rdfs:isDefinedBy rsot: .
+
 rsot:hasMeasure a owl:ObjectProperty;
     rdfs:label "Measure"@en ; 
     rdfs:range rsot:Measure ;
