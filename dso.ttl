@@ -15,9 +15,9 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema> .
 @prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
-########
+#########
 # CLASSES
-########
+#########
 
 dso:DaylightFactor a owl:Class;
     rdfs:subClassOf rsot:Result ;
