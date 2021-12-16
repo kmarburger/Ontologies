@@ -32,8 +32,6 @@ rsot:Result a owl:Class ;
     rdfs:range xsd:decimal ;
     rdfs:isDefinedBy rsot: .
 
-
-
 rsot:SpeckleObject a owl:Class ;
     rdfs:subClassOf omg:Geometry ;
     rdfs:label "Speckle Object"@en ;
@@ -75,7 +73,7 @@ rsot:Height a owl:CLass;
     rdfs:range xsd:decimal ;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasRoomCenterPoint a owl:Class;
+rsot:RoomCenterPoint a owl:Class;
     rdfs:subClassOf cco:Point ;
     rdfs:label "Room Center Point)"@en;
     rdfs:isDefinedBy rsot: . 
