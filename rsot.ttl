@@ -108,7 +108,8 @@ rsot:TestSurface a owl:Class;
 #Room geometry/construction
 
 rsot:simulatedRoom a owl:ObjectProperty  ;
-    rdfs:subPropertyOf bot:Zone ;
+    rdfs:subPropertyOf bot:containsZone ;
+    rdfs:range bot:space ;
     rdfs:label "Simulated Room"@en ;
     rdfs:isDefinedBy rsot: .
 
@@ -146,9 +147,9 @@ rsot:hasSurface a owl:ObjectProperty;
     rdfs:label "An Indoor Surface"@en;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasContext a owl:ObjectProperty;
+rsot:hasContext a owl:DataTypeProperty;
     rdfs:subPropertyOf omg:hasGeometry ;
-    rdfs:label "Relationship between a room and a context geometry"@en ;
+    rdfs:label "Relationship between a room and a context geometry (speckle url)"@en ;
     rdfs:rangeIncludes
         rsot:Context ;
     vs:term_status "stable" ;
@@ -156,24 +157,23 @@ rsot:hasContext a owl:ObjectProperty;
 
 #Coordinates and measurements
 rsot:maximumSimulatedValue a owl:DataTypeProperty ;
-    rdfs:subbClassOf rsot:hasResult ;
+    rdfs:subbClassOf rsot:hasMeasure ;
     rdfs:label "The maximum result from"@en ;
     rdfs:range xds:decimal ;
     rdfs:isDefinedBy rsot: .
 
 rsot:minimumSimulatedValue a owl:DataTypeProperty ;
-    rdfs:subbClassOf rsot:hasResult ;
+    rdfs:subbClassOf rsot:hasMeasure ;
     rdfs:label "The minimum result from"@en ;
     rdfs:range xds:decimal ;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasMeasure a owl:ObjectProperty;
+rsot:hasMeasure a owl:DataTypeProperty;
     rdfs:label "Measure"@en ; 
-    rdfs:range rsot:Measure ;
     vs:term_status "stable";
     rdfs:isDefinedBy rsot: .
 
-rsot:hasRoomCenterPoint a owl:ObjectProperty;
+rsot:hasRoomCenterPoint a owl:DataTypeProperty;
     rdfs:subPropertyOf cco:hasPoint ;
     rdfs:label "Point of orgin (cartesian)"@en;
     rdfs:range xsd:string;
@@ -259,7 +259,6 @@ rsot:hasCoordinates a owl:DataTypeProperty ;
 #Simulation 
 
 rsot:simulatedBy a owl:ObjectProperty ;
-    rdfs:subPropertyOf rsot:BoundaryCondition ;
     rdfs:domainIncludes 
         rsot:Result ;
     rdfs:label "Relationship between simulationist and result"@en ;
@@ -275,7 +274,7 @@ rsot:simulatedResult a owl:DatatypeProperty  ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasBoundaryCondition a owl:ObjectProperty ;
+rsot:hasBoundaryCondition a owl:DataTypeProperty ;
     rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "Boundary condition for a simulation"@en ;
     rdfs:domainIncludes
@@ -304,7 +303,7 @@ rsot:BoundaryCondition rdfs:comment
         "The boundary condition class is a an owl:subClassOff rsot:Measure, meaning the boundary condition should represent a measureable value that is applied to a simulation as a boundary condition."@en . 
 
 rsot:Context rdfs:comment
-        "The context class is defined as an owl:subClassOf the omg:Geometry class, which represents any given geometry. The context is assumed to be a generic model of any relevant surrounding geometry models (these can also be repsresented as speckle objects."@en .
+        "The context class is defined as an owl:subClassOf the omg:Geometry class, which represents any given geometry. The context is assumed to be a generic model of any relevant surrounding geometry (these can also be repsresented as speckle objects."@en .
 
 
 #Geomtries and values

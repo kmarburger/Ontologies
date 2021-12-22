@@ -96,7 +96,7 @@ dso:GlazingTransmittance a owl:Class;
 #######
 
 dso:simulatedDaylightFactor a owl:DatatypeProperty ;
-  rdfs:subPropertyOf rsot:hasResult ;
+  rdfs:subPropertyOf rsot:simulatedResult ;
   rdfs:label "Simulated Daylight Factor. A percentage of the amount of daylight available in a zone compared to outside (overcast)."@en ;
   rdfs:range xsd:decimal ;
   schema:domainIncludes
@@ -105,7 +105,7 @@ dso:simulatedDaylightFactor a owl:DatatypeProperty ;
   rdfs:isDefinedBy dso: .
 
 dso:simulatedAverageDaylightFactor a owl:DatatypeProperty ;
-  rdfs:subPropertyOf rsot:hasResult ;
+  rdfs:subPropertyOf rsot:simulatedResult ;
   rdfs:label "Simulated Average Daylight Factor (average of a zone)"@en ;
   rdfs:range xsd:decimal ;
   schema:domainIncludes
@@ -114,7 +114,7 @@ dso:simulatedAverageDaylightFactor a owl:DatatypeProperty ;
   rdfs:isDefinedBy dso: .
 
 dso:simulatedUDIAcheived a owl:DatatypeProperty ;
-  rdfs:subPropertyOf rsot:hasResult ;
+  rdfs:subPropertyOf rsot:simulatedResult ;
   rdfs:label "Simulated percentage of time between 100-2000lux at a point."@en ;
   rdfs:range xsd:decimal ;
   schema:domainIncludes
@@ -123,7 +123,7 @@ dso:simulatedUDIAcheived a owl:DatatypeProperty ;
   rdfs:isDefinedBy dso: .
 
 dso:simulatedUDIFellShort a owl:DatatypeProperty ;
-  rdfs:subPropertyOf rsot:hasResult ;
+  rdfs:subPropertyOf rsot:simulatedResult ;
   rdfs:label "Simulated  percentage of time with more than 2000lux at a point"@en ;
   rdfs:range xsd:decimal ;
   schema:domainIncludes
@@ -132,7 +132,7 @@ dso:simulatedUDIFellShort a owl:DatatypeProperty ;
   rdfs:isDefinedBy dso: .
 
 dso:simulatedUDIExceeded a owl:DatatypeProperty ;
-  rdfs:subPropertyOf rsot:hasResult ;
+  rdfs:subPropertyOf rsot:simulatedResult ;
   rdfs:label "Simulated percentage of time with more than 2000lux at a point"@en ;
   rdfs:range xsd:decimal ;
   schema:domainIncludes
@@ -141,7 +141,7 @@ dso:simulatedUDIExceeded a owl:DatatypeProperty ;
   rdfs:isDefinedBy dso: .
 
 dso:simulatedDaylightAutonomy a owl:DatatypeProperty ;
-  rdfs:subPropertyOf rsot:hasResult ;
+  rdfs:subPropertyOf rsot:simulatedResult ;
   rdfs:label "Simulated Daylight Autonomy (at a point), at a target illuminance of 300lux"@en ;
   rdfs:range xsd:decimal ;
   schema:domainIncludes
@@ -150,7 +150,7 @@ dso:simulatedDaylightAutonomy a owl:DatatypeProperty ;
   rdfs:isDefinedBy dso: .
 
 dso:simulatedSpatialDaylightAutonomy a owl:DatatypeProperty ;
-  rdfs:subPropertyOf rsot:hasResult ;
+  rdfs:subPropertyOf rsot:simulatedResult ;
   rdfs:label "Simulated Spatial Daylight Autonomy (average of a zone), at a target illuminance of 300lux"@en ;
   rdfs:range xsd:decimal ;
   schema:domainIncludes
@@ -170,13 +170,13 @@ dso:simulatedLocation a owl:ObjectProperty ;
     rdfs:isDefinedBy dso: .
 
 dso:simulatedYear a owl:DatatypeProperty;
-    rdfs:subPropertyOf rsot:hasMeasure ;
+    rdfs:subPropertyOf rsot:simulatedResult ;
     rdfs:label "Year chosen for simulation"@en ;
     rdfs:range xsd:positiveInteger ;
     rdfs:isDefinedBy dso: .
 
 dso:hasRGBReflectance a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:hasMeasure ;
+    rdfs:subPropertyOf rsot:simulatedResult ;
     rdfs:label "RGB Reflectance of a surface)"@en ;
     schema:domainIncludes
         rsot:Result ; 
@@ -187,15 +187,6 @@ dso:hasRGBReflectance a owl:DatatypeProperty ;
 ##################
 # Window properties 
 ##################
-
-dso:hasGValue a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:hasMeasure ;
-    rdfs:label "G-value for the window"@en ;
-    schema:domainIncludes
-        rsot:Window ;
-    rdfs:range xsd:decimal ;
-    vs:term_status "stable" ;
-    rdfs:isDefinedBy dso: .
 
 dso:hasGlazingTransmittance a owl:DatatypeProperty ;
     rdfs:subPropertyOf rsot:hasMeasure ;
