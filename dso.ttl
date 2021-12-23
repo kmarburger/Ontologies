@@ -159,7 +159,6 @@ dso:simulatedSpatialDaylightAutonomy a owl:DatatypeProperty ;
   rdfs:isDefinedBy dso: .
 
 dso:simulatedLocation a owl:ObjectProperty ;
-    rdfs:subPropertyOf gn:Feature ;
     rdfs:label "Simulated Location"@en ;
     rdfs:range xsd:string ;
     schema:rangeIncludes
