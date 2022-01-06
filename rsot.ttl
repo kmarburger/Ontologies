@@ -108,7 +108,7 @@ rsot:TestSurface a owl:Class;
 #Room geometry/construction
 
 rsot:simulatedRoom a owl:ObjectProperty  ;
-    rdfs:subPropertyOf bot:containsZone ;
+    rdfs:subPropertyOf bot:hasSpace;
     rdfs:range bot:space ;
     rdfs:label "Simulated Room"@en ;
     rdfs:isDefinedBy rsot: .
