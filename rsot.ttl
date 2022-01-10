@@ -346,10 +346,10 @@ rsot:hasVolume rdfs:comment
         "The edge rsot:hasVolume defines the relationship between any measured or simulated volume and the simulated reuslt or geomtry. The unit i defined and (m^3), and it is an owl:subPropertyOf rsot:Measure."@en .
 
 rsot:hasWidth rdfs:comment
-        "The relationship between a roomtype/geometry and the width. It is defined as an owl:subPropertyOf rsot:hasDistance."@en .
+        "The relationship between a thing and its width (for windows it has been applied as the indoor measurements. For rooms it was applied as a bounding box). It is defined as an owl:subPropertyOf rsot:hasDistance."@en .
 
 rsot:hasDepth rdfs:comment
-        "The relationship between a roomtype/geometry and the depth. It is defined as an owl:subPropertyOf rsot:hasDistance."@en .
+        "The relationship between a a thing and its depth (for windows it has been applied as the indoor measurements. For rooms it was applied as a bounding box).  It is defined as an owl:subPropertyOf rsot:hasDistance."@en .
 
 rsot:hasHeight rdfs:comment
         "The relationshiip between a roomtype/geometry and it's corresponding height. It is defined as an owl:subPropertyOf rsot:hasDistance."@en .
