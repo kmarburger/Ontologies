@@ -169,13 +169,13 @@ dso:simulatedLocation a owl:ObjectProperty ;
     rdfs:isDefinedBy dso: .
 
 dso:simulatedYear a owl:DatatypeProperty;
-    rdfs:subPropertyOf rsot:simulatedResult ;
+    rdfs:subPropertyOf rsot:hasBoundaryCondition ;
     rdfs:label "Year chosen for simulation"@en ;
     rdfs:range xsd:positiveInteger ;
     rdfs:isDefinedBy dso: .
 
 dso:hasRGBReflectance a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:simulatedResult ;
+    rdfs:subPropertyOf rsot:hasBoundaryCondition ;
     rdfs:label "RGB Reflectance of a surface)"@en ;
     schema:domainIncludes
         rsot:Result ; 
@@ -188,7 +188,7 @@ dso:hasRGBReflectance a owl:DatatypeProperty ;
 ##################
 
 dso:hasGlazingTransmittance a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:hasMeasure ;
+    rdfs:subPropertyOf rsot:hasBoundaryCondition ;
     rdfs:label "Light transmittance of glass/window"@en ;
     schema:domainIncludes
         rsot:Window ;
@@ -197,7 +197,7 @@ dso:hasGlazingTransmittance a owl:DatatypeProperty ;
     rdfs:isDefinedBy dso: .
 
 dso:hasGlazingReflectance a owl:DatatypeProperty ;
-    rdfs:subPropertyOf rsot:hasMeasure ;
+    rdfs:subPropertyOf rsot:hasBoundaryCondition ;
     rdfs:label "Glazing reflectance"@en ;
     schema:domainIncludes
         rsot:Window ;
