@@ -91,7 +91,7 @@ nvo:simulatedOpeningArea a owl:DatatypeProperty ;
   vs:term_status "stable" ;
   rdfs:isDefinedBy nvo: .
 
-nvo:simulatedHeight a owl:DataTypeProperty ;
+nvo:simulatedHeight a owl:DatatypeProperty ;
   rdfs:subPropertyOf rsot:hasDistance ;
   rdfs:label "Simulated height of probe point"@en ;
   rdfs:range xsd:decimal ;
@@ -136,7 +136,7 @@ nvo:simulatedDistance a owl:DatatypeProperty ;
   vs:term_status "stable" ;
   rdfs:isDefinedBy nvo: .
 
-nvo:simulatedTimeStep a owl:DataTypeProperty ;
+nvo:simulatedTimeStep a owl:DatatypeProperty ;
   rdfs:subPropertyOf rsot:hasBoundaryCondition ;
   rdfs:label "Simulated timestep"@en ;
   rdfs:range xsd:decimal ;
