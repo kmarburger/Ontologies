@@ -1,8 +1,12 @@
 # This work was created by Anna Krusell and Kristine Marburger at the Techical University of Denmark 
-# The ontology was developed in connection with the master thesis 'Graph databases for optimisation
-# and design exploration with regards to indoor climate' in the autumn of 2021. 
+# The ontology was developed in connection with the Master Thesis 'Graph Databases for Optimisation
+# and Design Exploration with Regards to Indoor Climate Simulation' in the autumn of 2021. 
 # RSOT uses W3C's RDF technology, an open Web standard that can be freely 
 # used by anyone.
+
+###########################################
+# RSOT:  ROOM SIMULATION ONTOLOGY TOPOLOGY
+###########################################
 
 @prefix rsot:    <https://example.com/terms#> .
 @prefix rdfs:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -67,7 +71,7 @@ rsot:Depth a owl:Class;
     rdfs:range xsd:decimal ;
     rdfs:isDefinedBy rsot: .
 
-rsot:Height a owl:CLass;
+rsot:Height a owl:Class;
     rdfs:subClassOf rsot:Distance;    
     rdfs:label "Height"@en;
     rdfs:range xsd:decimal ;
@@ -75,7 +79,7 @@ rsot:Height a owl:CLass;
 
 rsot:RoomCenterPoint a owl:Class;
     rdfs:subClassOf cco:Point ;
-    rdfs:label "Room Center Point)"@en;
+    rdfs:label "Room center point"@en;
     rdfs:isDefinedBy rsot: . 
 
 rsot:Orientation a owl:Class;
@@ -87,40 +91,40 @@ rsot:Orientation a owl:Class;
 
 rsot:WFR a owl:Class;
     rdfs:subClassOf rsot:Measure ;
-    rdfs:label "Window Floor Ratio"@en;
+    rdfs:label "Window floor ratio"@en;
     rdfs:range xsd:decimal ;
     rdfs:isDefinedBy rsot: .
 
 rsot:Surface a owl:Class;
     rdfs:subClassOf bot:Interface;  
-    rdfs:label "An Indoor Surface"@en;
+    rdfs:label "A surface"@en;
     rdfs:isDefinedBy rsot: .
 
 rsot:TestSurface a owl:Class;
     rdfs:subClassOf omg:Geometry;
-    rdfs:label "Test Surface"@en ;
+    rdfs:label "Test surface"@en ;
     rdfs:isDefinedBy rsot: .
 
-########
-# EDGES
-########
+############
+# PREDICATES
+############
 
 #Room geometry/construction
 
 rsot:simulatedRoom a owl:ObjectProperty  ;
     rdfs:subPropertyOf bot:hasSpace;
     rdfs:range bot:space ;
-    rdfs:label "Simulated Room"@en ;
+    rdfs:label "Simulated room"@en ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasSpeckle a owl:DatatypeProperty ;
     rdfs:subPropertyOf omg:hasGeometry ;
-    rdfs:label "Speckle Object"@en ;
+    rdfs:label "Speckle object"@en ;
     rdfs:range xsd:string ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasFloorArea a owl:DataTypeProperty ;
+rsot:hasFloorArea a owl:DatatypeProperty ;
     rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "Internal floor area"@en ;
     rdfs:range xsd:decimal ; 
@@ -129,7 +133,7 @@ rsot:hasFloorArea a owl:DataTypeProperty ;
 
 rsot:hasWFR a owl:DatatypeProperty;
     rdfs:subPropertyOf rsot:hasMeasure ;
-    rdfs:label "has Window Floor Ratio (WFR)"@en ;
+    rdfs:label "has window floor ratio (WFR)"@en ;
     rdfs:range xsd:decimal ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
@@ -144,53 +148,53 @@ rsot:hasRoomType a owl:DataTypeProperty ;
 
 rsot:hasSurface a owl:ObjectProperty;
     rdfs:subPropertyOf bot:hasInterface;  
-    rdfs:label "An Indoor Surface"@en;
+    rdfs:label "An indoor surface"@en;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasContext a owl:DataTypeProperty;
+rsot:hasContext a owl:DatatypeProperty;
     rdfs:subPropertyOf omg:hasGeometry ;
-    rdfs:label "Relationship between a room and a context geometry (speckle url)"@en ;
+    rdfs:label "Context geometry"@en ;
     rdfs:rangeIncludes
         rsot:Context ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
 #Coordinates and measurements
-rsot:maximumSimulatedValue a owl:DataTypeProperty ;
+rsot:maximumSimulatedValue a owl:DatatypeProperty ;
     rdfs:subbClassOf rsot:hasMeasure ;
-    rdfs:label "The maximum result from"@en ;
+    rdfs:label "Maximum simulated result"@en ;
     rdfs:range xds:decimal ;
     rdfs:isDefinedBy rsot: .
 
-rsot:minimumSimulatedValue a owl:DataTypeProperty ;
+rsot:minimumSimulatedValue a owl:DatatypeProperty ;
     rdfs:subbClassOf rsot:hasMeasure ;
-    rdfs:label "The minimum result from"@en ;
+    rdfs:label "Minimum simulated result"@en ;
     rdfs:range xds:decimal ;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasMeasure a owl:DataTypeProperty;
+rsot:hasMeasure a owl:DatatypeProperty;
     rdfs:label "Measure"@en ; 
     vs:term_status "stable";
     rdfs:isDefinedBy rsot: .
 
-rsot:hasRoomCenterPoint a owl:DataTypeProperty;
+rsot:hasRoomCenterPoint a owl:DatatypeProperty;
     rdfs:subPropertyOf cco:hasPoint ;
-    rdfs:label "Point of orgin (cartesian)"@en;
+    rdfs:label "Center point of room (cartesian)"@en;
     rdfs:range xsd:string;
     vs:term_status "stable";
     rdfs:isDefinedBy rsot: .
 
 rsot:hasDistance a owl:DatatypeProperty ;
     rdfs:subPropertyOf rsot:hasMeasure ;
-    rdfs:label "has Distance"@en ;
+    rdfs:label "Distance"@en ;
     rdfs:range xsd:decimal ;
     qudt:ucumCode "m" ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasVolume a owl:DataTypeProperty ;
+rsot:hasVolume a owl:DatatypeProperty ;
     rdfs:subPropertyOf rsot:hasMeasure ;
-    rdfs:label "has volume"@en ;
+    rdfs:label "Volume"@en ;
     rdfs:range xsd:decimal ;
     qudt:ucumCode "m^3" ;
     vs:term_status "stable" ;
@@ -198,7 +202,7 @@ rsot:hasVolume a owl:DataTypeProperty ;
 
 rsot:hasWidth a owl:DatatypeProperty ;
     rdfs:subPropertyOf rsot:hasDistance ;
-    rdfs:label "has width"@en ;
+    rdfs:label "Width"@en ;
     rdfs:range xsd:decimal ;
     qudt:ucumCode "m" ;
     vs:term_status "stable" ;
@@ -206,7 +210,7 @@ rsot:hasWidth a owl:DatatypeProperty ;
 
 rsot:hasDepth a owl:DatatypeProperty ;
     rdfs:subPropertyOf rsot:hasDistance;
-    rdfs:label "has depth"@en ;
+    rdfs:label "Depth"@en ;
     rdfs:range xsd:decimal ;
     qudt:ucumCode "m" ;
     vs:term_status "stable" ;
@@ -214,7 +218,7 @@ rsot:hasDepth a owl:DatatypeProperty ;
 
 rsot:hasHeight a owl:DatatypeProperty ; 
     rdfs:subPropertyOf rsot:hasDistance ;
-    rdfs:label "has Height"@en ;
+    rdfs:label "Height"@en ;
     rdfs:range xsd:decimal ;
     qudt:ucumCode "m" ;
     vs:term_status "stable" ;
@@ -233,7 +237,7 @@ rsot:hasOrientation a owl:DatatypeProperty ;
 
 rsot:hasWallCenterPoint a owl:DatatypeProperty ;
     rdfs:subPropertyOf cco:hasPoint ;
-    rdfs:label "Center point of wall, used for placement of windows"@en ;
+    rdfs:label "Center point of wall"@en ;
     rdfs:range xsd:string ;
     rdfs:domainIncludes
         bot:Element ;
@@ -244,7 +248,7 @@ rsot:hasTestSurface a owl:DataTypeProperty ;
     rdfs:subPropertyOf rsot:Measure ;
     rdfs:domainIncludes
         rsot:Result ;
-    rdfs:label "The test surface, can be given by a list of points(polyline) or a surface."@en ;
+    rdfs:label "Test surface"@en ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
@@ -269,14 +273,14 @@ rsot:simulatedResult a owl:DatatypeProperty  ;
     rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:domainIncludes
         rsot:Result ;
-    rdfs:label "Relationship between result ID and result"@en ;
+    rdfs:label "Relationship between result instance and result"@en ;
     rdfs:range xsd:decimal ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasBoundaryCondition a owl:DataTypeProperty ;
     rdfs:subPropertyOf rsot:hasMeasure ;
-    rdfs:label "Boundary condition for a simulation"@en ;
+    rdfs:label "Boundary condition"@en ;
     rdfs:domainIncludes
         rsot:BoundaryCondition ;
     vs:term_status "stable" ;
@@ -291,86 +295,83 @@ rsot:hasBoundaryCondition a owl:DataTypeProperty ;
 
 #Simulation
 rsot:Measure rdfs:comment
-        "Measure represents any measureable value. The value can be a boundary condition (a measure, even though it is a simulated value. No unit is specified, as a measure can have many different units. These can be defined by the user of the ontology"@en .
+        "Measure represents any measureable value. No unit is assigned, this can be done separately."@en .
 
 rsot:Result rdfs:comment
-        "The simulated result. A simulated value, that can be assigned any unit. Boundary conditions can be assigned using the rsot: or nvo: ontologies, or by adding others."@en .
+        "The simulated result. A simulated value, that can be assigned any unit."@en .
 
 rsot:SpeckleObject rdfs:comment
-        "The speckleobject class can be used to define any link to a speckleobject. The object is undefined, it can be any geometric shape."@en .
+        "Speckle object can be used to define any URL to a speckle stream (object). The object is undefined, it can be any geometric shape."@en .
 
 rsot:BoundaryCondition rdfs:comment
-        "The boundary condition class is a an owl:subClassOff rsot:Measure, meaning the boundary condition should represent a measureable value that is applied to a simulation as a boundary condition."@en . 
+        "A boundary condition instance should represent a measureable value that is applied to a simulation as a boundary condition."@en . 
 
 rsot:Context rdfs:comment
-        "The context class is defined as an owl:subClassOf the omg:Geometry class, which represents any given geometry. The context is assumed to be a generic model of any relevant surrounding geometry (these can also be repsresented as speckle objects."@en .
+        "Context should be a generic model of any relevant surrounding geometry (these can be repsresented as speckle objects)."@en .
 
 
 #Geomtries and values
 #####################
 
 rsot:RoomType rdfs:comment
-        "The rsot:roomtype class is used to define any room geometry, and its characteristic features. This can be any word, in a string. (Some examples of roomtypes could be: deep, standard, wide, tall, round, etc.)."@en .
+        "RoomType is used to define any room geometry, and its characteristic features. This can be any word, in a string. (Some examples of roomtypes could be: deep, standard, wide, tall, round, etc.)."@en .
 
 rsot:Distance rdfs:comment
-        "The rsot:Distance class represents any simulated distance, given in metres. The distance can be used in many ways in relation to simulations, if any information is necessary this should be defined by the user of the ontology."@en . 
+        "Distance represents any simulated distance, given in metres. The distance can be used in many ways in relation to simulations."@en . 
 
 rsot:Width rdfs:comment
-        "The rsot:Width class represents a simulated width in relation to the simulated result- The width should be defined in metres. If any other information is necessary, this should be defined by the user of the ontology."@en . 
+        "Width represents a simulated width. The width should be given in metres. It is always measured internally. It can represent the width of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box width."@en . 
 
 rsot:Depth rdfs:comment
-        "The rsot:Depth class represents the depth of the room, measured internally.the width of the room should be defined in metres. if any other information is necessary, it should be defed by the user of the ontology. "@en .
+        "Depth represents a simulated depth. the depth should be given in metres.  It is always measured internally. It can represent the depth of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box depth."@en .
 
 rsot:Height rdfs:comment
-        "The rsot:Height class represents any height measured in relation to a simulated result or geomtry. The heiight should be defined in metres. It is an owl:subClassOf rsot:Measure, meaning the value should represent a simulated height."@en . 
+        "The rsot:Height class represents any height measured in relation to a simulated result or geomtry. The height should be given in metres.  It is always measured internally. It can represent the height of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box height."@en . 
 
 rsot:WFR rdfs:comment
-        "The window floor ratio, calculated by dividing a window area/opening area with the internal floor area. The value does not have a defined unit, but it should be a percentage/ratio representing physiical measurements."@en .
+        "The window floor ratio, calculated by dividing a window area (glazing area) with the internal floor area. The value is a percentage/ratio representing physical measurements."@en .
 
 
 
-#Edges
+#Predicates
 ######
 
 #Coordinates and measurements
 rsot:hasMeasure rdfs:comment
-        "The edge rsot:hasMeasure should be used to define the relationship between a simulated result and any physical/simulated/assument measure that related to the rsot:Result. It is defined as an owl:DataTypeProperty"@en . 
+        "The relationship between a simulated result and any physical/simulated measure."@en . 
 
 rsot:hasRoomCenterPoint rdfs:comment
-        "The edge rsot:hasRoomCenterPoint defines the relationship between a room and its centerpoint. The centerpoint is imortant to include for the visualisation of results in the future. it is defined as an owl:subbPropertyOf rsot:hasMeasure."@en .
+        "The relationship between a room instance and its centerpoint. The center point should be given in cartesian coordinates."@en .
 
 rsot:hasDistance rdfs:comment
-        "The edge:hasDistance defines the relationship between any measured or simulated distance and the simulated result or geomtry. The unit is defined as meters, and it is an owl:subPropertyOf rsot:hasMeasure."@en .
+        "The relationship between any measured/simulated distance and a thing/geometry. The unit is defined as meters."@en .
 
 rsot:hasVolume rdfs:comment
-        "The edge rsot:hasVolume defines the relationship between any measured or simulated volume and the simulated reuslt or geomtry. The unit i defined and (m^3), and it is an owl:subPropertyOf rsot:Measure."@en .
+        "The relationship between any measured/simulated volume and the geometry. The unit is defined as cubic metres."@en .
 
 rsot:hasWidth rdfs:comment
-        "The relationship between a thing and its width (for windows it has been applied as the indoor measurements. For rooms it was applied as a bounding box). It is defined as an owl:subPropertyOf rsot:hasDistance."@en .
+        "The relationship between a thing and its width. The width is always measured internally.  If applied to a non-rectanglular shaped room, assume a bounding box width."@en .
 
 rsot:hasDepth rdfs:comment
-        "The relationship between a a thing and its depth (for windows it has been applied as the indoor measurements. For rooms it was applied as a bounding box).  It is defined as an owl:subPropertyOf rsot:hasDistance."@en .
+        "The relationship between a a thing and its depth. The depth is always measured internally. If applied to a non-rectanglular shaped room, assume a bounding box depth."@en .
 
 rsot:hasHeight rdfs:comment
-        "The relationshiip between a roomtype/geometry and it's corresponding height. It is defined as an owl:subPropertyOf rsot:hasDistance."@en .
+        "The relationshiip between a thing and it's height. The height is always measured internally. If applied to a non-rectanglular shaped room, assume a bounding box height."@en .
 
 rsot:hasOrientation rdfs:comment
-        "The relationship between a room/geomtry/window opening and its corresponding orientation. The orientation should be given in degrees. It is defined as an owl:subPropertyOf rsot:hasMeasure."@en .
+        "The relationship between a thing and its corresponding orientation. The orientation is given in degrees."@en .
 
 rsot:hasWallCenterPoint rdfs:comment
-        "The edge rsot:hasWallCenterPoint defines the relationship between a wall and is centre point (x,y,z). This point is essential to ensure that any windows will be placed correctly in the wall."@en .
-
-rsot:hasIfcCartesianPoint rdfs:comment
-        "The edge rsot:hasIfcCartesianPoint is an edge used to define any bot:SubElement's placement in/on a wall. It should be gived in two dimentsions (x,y), and will be placed according to a walls centre point. This is the same method used in IFC modelling."@en .
+        "The relationship between a wall and is centre point (x,y,z)."@en .
 
 rsot:hasTestSurface rdfs:comment
-        "The edge rsot:hasTestSurface us an edge used to define the reltionship between a testsurface and is corresponding geometry and/or simulated result. "@en .
+        "The relationship between a test surface and its simulated result."@en .
 
 rsot:hasCoordinates rdfs:comment
-        "The edge rsot:hasCoordinates is an edge used to define the relationship between any set of coordinates and their corresponding result or geomtry."@en .
+        "The relationship between a thing and any set of coordinates (x,y,z)."@en .
 
 rsot:hasBoundaryCondition rdfs:comment 
-        "the relationship between a result and any boundary condition. Many boundary conditions are described in other ontologies"@en .
+        "The relationship between a result and a boundary condition."@en .
 
 rsot:simulatedRoom rdfs:comment
-        "This relationship between the simulated room type and the given result name/ID. The result ID should have defined relationships with all given boundary conditions."@en .
+        "The relationship between the simulated room and the result instance."@en .
