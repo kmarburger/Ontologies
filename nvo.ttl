@@ -1,8 +1,12 @@
 # This work was created by Anna Krusell and Kristine Marburger at the Techical University of Denmark 
-# The ontology was developed in connection with the master thesis 'Graph databases for optimisation
-# and design exploration with regards to indoor climate' in the autumn of 2021. 
+# The ontology was developed in connection with the Master Thesis 'Graph Databases for Optimisation
+# and Design Exploration with Regards to Indoor Climate Simulation' in the autumn of 2021. 
 # NVO uses W3C's RDF technology, an open Web standard that can be freely 
 # used by anyone.
+
+#####################################
+# NVO:  NATURAL VENTILATION ONTOLOGY
+#####################################
 
 @prefix rsot:    <https://example.com/terms#> .
 @prefix nvo:    <https://example.com/terms2#> .
@@ -21,14 +25,14 @@
 
 nvo:IndoorVelocity a owl:Class ;
   rdfs:subClassOf rsot:Result ;
-  rdfs:label "Indoor Velocity"@en ;
+  rdfs:label "Simulated indoor velocity"@en ;
   rdfs:range
     rsot:Result ; 
   rdfs:isDefinedby nvo: .
 
 nvo:IndoorTemperature a owl:Class ;
   rdfs:subClassOf rsot:Result ;
-  rdfs:label "Simulated Indoor Indoor Temperature"@en ;
+  rdfs:label "Simulated indoor temperature"@en ;
   rdfs:range
     rsot:Result ; 
   rdfs:isDefinedby nvo: .
@@ -49,31 +53,31 @@ nvo:AverageIndoorTemperature a owl:Class ;
 
 nvo:OutdoorVelocity a owl:Class ;
   rdfs:subClassOf rsot:BoundaryCondition ;
-  rdfs:label "OutdoorVelocity"@en ;
+  rdfs:label "Outdoor velocity"@en ;
   rdfs:isDefinedBy nvo: .
 
 nvo:OutdoorTemperature a owl:Class ;
   rdfs:subClassOf rsot:BoundaryCondition ;
-  rdfs:label "OutdoorTemperature"@en ;
+  rdfs:label "Outdoor temperature"@en ;
   rdfs:isDefinedBy nvo: .
 
-nvo:OpeningArea a owl:class ;
+nvo:OpeningArea a owl:Class ;
   rdfs:subClassOf rsot:Measure ;
   rdfs:label "Opening area"@en ;
   rdfs:isDefinedBy nvo: .
 
 nvo:DistanceFromWindow a owl:Class ;
   rdfs:subClassOf rsot:Measure ;
-  rdfs:label "DistanceFromWindow"@en ;
+  rdfs:label "Distance from window"@en ;
   rdfs:isDefinedBy nvo: .
 
 nvo:TimeStep a owl:Class ;
   rdfs:subClassOf rsot:BoundaryCondition ;
-  rdfs:label "TimeStep"@en ;
+  rdfs:label "Timestep"@en ;
   rdfs:isDefinedBy nvo: .
 
 ######
-#EDGES
+#PREDICATES
 ######
 
 nvo:simulatedOpeningArea a owl:DatatypeProperty ;
@@ -89,7 +93,7 @@ nvo:simulatedOpeningArea a owl:DatatypeProperty ;
 
 nvo:simulatedHeight a owl:DataTypeProperty ;
   rdfs:subPropertyOf rsot:hasDistance ;
-  rdfs:label ""@en ;
+  rdfs:label "Simulated height of probe point"@en ;
   rdfs:range xsd:decimal ;
   qudt:ucumCode "m" ;
   rdfs:range rsot:Height ;
@@ -150,48 +154,48 @@ nvo:simulatedTimeStep a owl:DataTypeProperty ;
 #Classes
 
 nvo:IndoorVelocity rdfs:comment
-    "The simulated indoor velocity. The value can be both simulated or it can be an assumed value, used to generate other types of results. For natural ventilation simulations, the value should represent a simulated value, given in the unit m/s."@en .
+    "A simulated or measured indoor velocity measured at a point inside a room. Given in the unit m/s."@en .
 
 nvo:IndoorTemperature rdfs:comment
-    "The simulated indoor temerpature. The value can be both a simulated or assumed value, used to generate other types of results. For natural ventilation simulations the value should represent a simulated value, given in degrees celsius."@en . 
+    "A simulated or measured indoor temerpature measured at a point inside a room. Given in degrees celsius."@en . 
 
 nvo:OutdoorVelocity rdfs:comment
-    "The outdoor velocity used to simulate the natural ventilation results. In this ontology, the outdoor velocity is a subclass of 'rsot:BoundaryCondition'. Therefore, it should be a value that was used as a boundary condition. The Velocity should be given in m/s."@en . 
+    "The outdoor velocity used to simulate the natural ventilation results. It should be a value that was used as a boundary condition. The velocity should be given in m/s."@en . 
 
 nvo:OutdoorTemperature rdfs:comment 
-    "The outdoor temperature used to simulate the natural ventilation results. In this ontology, the outdoor temperature is a subclass of 'rsot:BoundaryCondition'. Therefore, it should be a value that was used as a boundary condition in the simulation. (if a CFD simulation has been carreid out without bouyancy, the BC does not need to be defined."@en . 
+    "The outdoor temperature used to simulate the natural ventilation results. It should be a value that was used as a boundary condition. The temperature should be given in degrees celsius."@en . 
 
 nvo:OpeningArea rdfs:comment
-    "The opening area used to simulate the indoor velociity or temoerature. It is inferred that the opening area ia an owl:SubClassOf rsot:BoundaryCondition. The opening area should be given in m^2."@en . 
+    "The opening area used to simulate the indoor velocity or temoerature. The opening area is defined by the area of opening where the air can enter the room freely. The opening area should be given in m^2."@en . 
 
 nvo:DistanceFromWindow rdfs:comment
-    "A distance, measured in metres, that represents the length from the centerpoint of the window to the probe point. This value is not necessary unless the probe points do not belong to a set of coordinates. These can be given by using the 'rsot:hasCoordinates' datatypeproperyy form the rsot ontology."@en . 
+    "A distance, measured in metres, that represents the length from the centerpoint of the window to a probe point. This value is not necessary unless the probe points do not belong to a set of coordinates. These can be given by using the 'rsot:hasCoordinates' datatypeproperty from the RSOT ontology."@en . 
 
 nvo:TimeStep rdfs:comment 
-    "A timestep used to define the amount of time that has passed before the measurement was made. This is only applicable if a transiient simulation has been run. The unit for the timesteps is set to seconds."@en .
+    "A timestep used to define the amount of time that has passed before the measurement was made. This is only applicable if a transient or semi-transient simulation has been run. It defines the amount of time that has passed since the window was opened. The unit for the timesteps is set to seconds."@en .
 
-#Edges
+#Predicates
 
 nvo:simulatedIndoorVelocity rdfs:comment
-    "The relationship between a result and the simulated indoor velocity value used for the simulation. The edge is defined as an owl:DataTypeProperty."@en . 
+    "The relationship between a result and the simulated indoor velocity value. "@en . 
 
 nvo:simulatedIndoorTemperature rdfs:comment 
-    "The relationship between a result and the simulated indoor temperature value used for the simulation. The edge is defined as an owl:DataTypeProperty"@en . 
+    "The relationship between a result and the simulated indoor temperature value."@en . 
 
 nvo:simulatedOutdoorVelocity rdfs:comment
-    "The relationship between a result and the simulated outdoor velocity value used for the simulation. The edge is defined as an owl:DataTypeProperty"@en . 
+    "The relationship between a result and the simulated outdoor velocity value."@en . 
 
 nvo:simulatedOutdoorTemperature rdfs:comment
-    "The relationship between a result and the simulated outdoor Temperature value used for the simulation. The result is the simulated value, and the temperature is a boundary condition. The edge is defined as an owl:DataTypeProperty"@en . 
+    "The relationship between a result and the simulated outdoor Temperature value used for the simulation. The result is the simulated value, and the temperature is a boundary condition."@en . 
 
 nvo:simulatedOpeningArea rdfs:comment
-    "The relationship between a result and the simulated opening area used for the simulation. The opening area is a boundary condition, and the edge is an owl:DataTypeProperty"@en . 
+    "The relationship between a result and the simulated opening area used for the simulation."@en . 
 
 nvo:simulatedHeight rdfs:comment
-    "The height where the probe point is placed. The unit is meters, and the edge is an 'owl:subProperty' of 'rsot:hasMeasure'. "@en . 
+    "The relationship between the height of the probe point (z-coordinate) and the result, given in metres."@en . 
 
 nvo:simulatedDistanceFromWindow rdfs:comment
-    "The relationship between the simulated distance from the center point of the window and a simulated result. The unit is meters."@en . 
+    "The relationship between the simulated distance from the center point of the window to the probe point and a simulated result. Given in metres. "@en . 
 
 nvo:simulatedTimeStep rdfs:comment
-    "The relationship between the simulated result and a result."@en . 
+    "The relationship between the simulated result and the timestep (amount of time the window was opened)."@en . 
