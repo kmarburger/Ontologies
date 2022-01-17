@@ -9,6 +9,7 @@ The developed ontologies are based on the principles from W3C and Tim Berners-Le
 OWL was the main ontology used to develop the new ontologies. Besides OWL, the new ontologies built upon the Building Ontology Topology that can be found [here](https://w3c-lbd-cg.github.io/bot/).
 BOT was developed for the AEC industry as an ontology to allow the user to define a building's topology.
 
+The ontologies were developed and implemented in a Grasshopper plugin that can be found [here](https://github.com/AnnaKrusell/Turtle).
 
 ## Daylight Simulation Ontology (DSO)
 The sub-ontology DSO ontology was developed to describe different types of daylight simulations, their associated boundary conditions and simulation results. 
