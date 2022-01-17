@@ -15,7 +15,7 @@ The ontologies were developed and implemented in a Grasshopper plugin that can b
 The sub-ontology DSO ontology was developed to describe different types of daylight simulations, their associated boundary conditions and simulation results. 
 
 
-## Natural Ventilation Onotlogy (NVO)
+## Natural Ventilation Ontology (NVO)
 The sub-ontology NVO was developed to describe the results and boundary conditions of CFD-simulations related to natural ventilation. 
 
 
