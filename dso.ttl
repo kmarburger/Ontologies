@@ -18,6 +18,7 @@
 @prefix gn:     <https://www.geonames.org/ontology/ontology_v3.3.rdf> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema> .
 @prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix cco:    <http://diarmuidr3d.github.io/cartCoord/> .
 
 #########
 # CLASSES

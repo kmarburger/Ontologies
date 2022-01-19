@@ -163,13 +163,13 @@ rsot:hasContext a owl:DatatypeProperty;
 rsot:maximumSimulatedValue a owl:DatatypeProperty ;
     rdfs:subbClassOf rsot:hasMeasure ;
     rdfs:label "Maximum simulated result"@en ;
-    rdfs:range xds:decimal ;
+    rdfs:range xsd:decimal ;
     rdfs:isDefinedBy rsot: .
 
 rsot:minimumSimulatedValue a owl:DatatypeProperty ;
     rdfs:subbClassOf rsot:hasMeasure ;
     rdfs:label "Minimum simulated result"@en ;
-    rdfs:range xds:decimal ;
+    rdfs:range xsd:decimal ;
     rdfs:isDefinedBy rsot: .
 
 rsot:hasMeasure a owl:DatatypeProperty;
