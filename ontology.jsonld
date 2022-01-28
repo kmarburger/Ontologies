@@ -1,0 +1,469 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/ucumCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://example.com/terms#BoundaryCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "A boundary condition instance should represent a measureable value that is applied to a simulation as a boundary condition."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Boundary Condition"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#Context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "Context should be a generic model of any relevant surrounding geometry (these can be repsresented as speckle objects)."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Context Geometry"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#Depth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "Depth represents a simulated depth. the depth should be given in metres.  It is always measured internally. It can represent the depth of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box depth."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Depth"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#Distance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "Distance represents any simulated distance, given in metres. The distance can be used in many ways in relation to simulations."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Distance"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#Height",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The rsot:Height class represents any height measured in relation to a simulated result or geomtry. The height should be given in metres.  It is always measured internally. It can represent the height of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box height."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Height"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#Measure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "Measure represents any measureable value. No unit is assigned, this can be done separately."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Measure"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#Orientation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Orientation"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#Result",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The simulated result. A simulated value, that can be assigned any unit."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Result"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#RoomCenterPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Room center point"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#RoomType",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "RoomType is used to define any room geometry, and its characteristic features. This can be any word, in a string. (Some examples of roomtypes could be: deep, standard, wide, tall, round, etc.)."
+  } ]
+}, {
+  "@id" : "https://example.com/terms#SpeckleObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "Speckle object can be used to define any URL to a speckle stream (object). The object is undefined, it can be any geometric shape."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Speckle Object"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#Surface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "A surface"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#TestSurface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Test surface"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#WFR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The window floor ratio, calculated by dividing a window area (glazing area) with the internal floor area. The value is a percentage/ratio representing physical measurements."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Window floor ratio"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#Width",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/Class" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "Width represents a simulated width. The width should be given in metres. It is always measured internally. It can represent the width of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box width."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Width"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasBoundaryCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DataTypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between a result and a boundary condition."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Boundary condition"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Context geometry"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasCoordinates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DataTypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between a thing and any set of coordinates (x,y,z)."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Coordinates (x,y,z) of a point"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasDepth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/ucumCode" : [ {
+    "@value" : "m"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between a a thing and its depth. The depth is always measured internally. If applied to a non-rectanglular shaped room, assume a bounding box depth."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Depth"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasDistance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/ucumCode" : [ {
+    "@value" : "m"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between any measured/simulated distance and a thing/geometry. The unit is defined as meters."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Distance"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasFloorArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Internal floor area"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasHeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/ucumCode" : [ {
+    "@value" : "m"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationshiip between a thing and it's height. The height is always measured internally. If applied to a non-rectanglular shaped room, assume a bounding box height."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Height"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between a simulated result and any physical/simulated measure."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Measure"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasOrientation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/ucumCode" : [ {
+    "@value" : "deg"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between a thing and its corresponding orientation. The orientation is given in degrees."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Orientation"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ],
+  "https://example.com/terms#standardUnit" : [ {
+    "@value" : "deg"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasRoomCenterPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between a room instance and its centerpoint. The center point should be given in cartesian coordinates."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Center point of room (cartesian)"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasRoomType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DataTypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "has room type"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasSpeckle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Speckle object"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasSurface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/ObjectProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "An indoor surface"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasTestSurface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DataTypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between a test surface and its simulated result."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Test surface"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasVolume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/ucumCode" : [ {
+    "@value" : "m^3"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between any measured/simulated volume and the geometry. The unit is defined as cubic metres."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Volume"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasWFR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "has window floor ratio (WFR)"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasWallCenterPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between a wall and is centre point (x,y,z)."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Center point of wall"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#hasWidth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://qudt.org/schema/qudt/ucumCode" : [ {
+    "@value" : "m"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between a thing and its width. The width is always measured internally.  If applied to a non-rectanglular shaped room, assume a bounding box width."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Width"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#maximumSimulatedValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Maximum simulated result"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#minimumSimulatedValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Minimum simulated result"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#simulatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/ObjectProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between simulationist and result"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#simulatedResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/DatatypeProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between result instance and result"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@value" : "stable"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#simulatedRoom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://www.w3.org/TR/owl-ref/ObjectProperty" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between the simulated room and the result instance."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#label" : [ {
+    "@language" : "en",
+    "@value" : "Simulated room"
+  } ]
+}, {
+  "@id" : "https://example.com/terms#standardUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://www.w3.org/TR/owl-ref/Class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/TR/owl-ref/DataTypeProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/TR/owl-ref/DatatypeProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/TR/owl-ref/ObjectProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]

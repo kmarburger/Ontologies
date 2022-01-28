@@ -1,0 +1,338 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://qudt.org/schema/qudt/ucumCode
+<http://qudt.org/schema/qudt/ucumCode> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#comment
+rdf:comment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#label
+rdf:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+###  https://example.com/terms#standardUnit
+<https://example.com/terms#standardUnit> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://www.w3.org/TR/owl-ref/Class
+<https://www.w3.org/TR/owl-ref/Class> rdf:type owl:Class .
+
+
+###  https://www.w3.org/TR/owl-ref/DataTypeProperty
+<https://www.w3.org/TR/owl-ref/DataTypeProperty> rdf:type owl:Class .
+
+
+###  https://www.w3.org/TR/owl-ref/DatatypeProperty
+<https://www.w3.org/TR/owl-ref/DatatypeProperty> rdf:type owl:Class .
+
+
+###  https://www.w3.org/TR/owl-ref/ObjectProperty
+<https://www.w3.org/TR/owl-ref/ObjectProperty> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://example.com/terms#BoundaryCondition
+<https://example.com/terms#BoundaryCondition> rdf:type owl:NamedIndividual ,
+                                                       <https://www.w3.org/TR/owl-ref/Class> ;
+                                              rdf:comment "A boundary condition instance should represent a measureable value that is applied to a simulation as a boundary condition."@en ;
+                                              rdf:label "Boundary Condition"@en .
+
+
+###  https://example.com/terms#Context
+<https://example.com/terms#Context> rdf:type owl:NamedIndividual ,
+                                             <https://www.w3.org/TR/owl-ref/Class> ;
+                                    rdf:comment "Context should be a generic model of any relevant surrounding geometry (these can be repsresented as speckle objects)."@en ;
+                                    rdf:label "Context Geometry"@en .
+
+
+###  https://example.com/terms#Depth
+<https://example.com/terms#Depth> rdf:type owl:NamedIndividual ,
+                                           <https://www.w3.org/TR/owl-ref/Class> ;
+                                  rdf:comment "Depth represents a simulated depth. the depth should be given in metres.  It is always measured internally. It can represent the depth of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box depth."@en ;
+                                  rdf:label "Depth"@en .
+
+
+###  https://example.com/terms#Distance
+<https://example.com/terms#Distance> rdf:type owl:NamedIndividual ,
+                                              <https://www.w3.org/TR/owl-ref/Class> ;
+                                     rdf:comment "Distance represents any simulated distance, given in metres. The distance can be used in many ways in relation to simulations."@en ;
+                                     rdf:label "Distance"@en .
+
+
+###  https://example.com/terms#Height
+<https://example.com/terms#Height> rdf:type owl:NamedIndividual ,
+                                            <https://www.w3.org/TR/owl-ref/Class> ;
+                                   rdf:comment "The rsot:Height class represents any height measured in relation to a simulated result or geomtry. The height should be given in metres.  It is always measured internally. It can represent the height of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box height."@en ;
+                                   rdf:label "Height"@en .
+
+
+###  https://example.com/terms#Measure
+<https://example.com/terms#Measure> rdf:type owl:NamedIndividual ,
+                                             <https://www.w3.org/TR/owl-ref/Class> ;
+                                    rdf:comment "Measure represents any measureable value. No unit is assigned, this can be done separately."@en ;
+                                    rdf:label "Measure"@en ;
+                                    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#Orientation
+<https://example.com/terms#Orientation> rdf:type owl:NamedIndividual ,
+                                                 <https://www.w3.org/TR/owl-ref/Class> ;
+                                        rdf:label "Orientation"@en .
+
+
+###  https://example.com/terms#Result
+<https://example.com/terms#Result> rdf:type owl:NamedIndividual ,
+                                            <https://www.w3.org/TR/owl-ref/Class> ;
+                                   rdf:comment "The simulated result. A simulated value, that can be assigned any unit."@en ;
+                                   rdf:label "Result"@en .
+
+
+###  https://example.com/terms#RoomCenterPoint
+<https://example.com/terms#RoomCenterPoint> rdf:type owl:NamedIndividual ,
+                                                     <https://www.w3.org/TR/owl-ref/Class> ;
+                                            rdf:label "Room center point"@en .
+
+
+###  https://example.com/terms#SpeckleObject
+<https://example.com/terms#SpeckleObject> rdf:type owl:NamedIndividual ,
+                                                   <https://www.w3.org/TR/owl-ref/Class> ;
+                                          rdf:comment "Speckle object can be used to define any URL to a speckle stream (object). The object is undefined, it can be any geometric shape."@en ;
+                                          rdf:label "Speckle Object"@en .
+
+
+###  https://example.com/terms#Surface
+<https://example.com/terms#Surface> rdf:type owl:NamedIndividual ,
+                                             <https://www.w3.org/TR/owl-ref/Class> ;
+                                    rdf:label "A surface"@en .
+
+
+###  https://example.com/terms#TestSurface
+<https://example.com/terms#TestSurface> rdf:type owl:NamedIndividual ,
+                                                 <https://www.w3.org/TR/owl-ref/Class> ;
+                                        rdf:label "Test surface"@en .
+
+
+###  https://example.com/terms#WFR
+<https://example.com/terms#WFR> rdf:type owl:NamedIndividual ,
+                                         <https://www.w3.org/TR/owl-ref/Class> ;
+                                rdf:comment "The window floor ratio, calculated by dividing a window area (glazing area) with the internal floor area. The value is a percentage/ratio representing physical measurements."@en ;
+                                rdf:label "Window floor ratio"@en .
+
+
+###  https://example.com/terms#Width
+<https://example.com/terms#Width> rdf:type owl:NamedIndividual ,
+                                           <https://www.w3.org/TR/owl-ref/Class> ;
+                                  rdf:comment "Width represents a simulated width. The width should be given in metres. It is always measured internally. It can represent the width of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box width."@en ;
+                                  rdf:label "Width"@en .
+
+
+###  https://example.com/terms#hasBoundaryCondition
+<https://example.com/terms#hasBoundaryCondition> rdf:type owl:NamedIndividual ,
+                                                          <https://www.w3.org/TR/owl-ref/DataTypeProperty> ;
+                                                 rdf:comment "The relationship between a result and a boundary condition."@en ;
+                                                 rdf:label "Boundary condition"@en ;
+                                                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasContext
+<https://example.com/terms#hasContext> rdf:type owl:NamedIndividual ,
+                                                <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                       rdf:label "Context geometry"@en ;
+                                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasCoordinates
+<https://example.com/terms#hasCoordinates> rdf:type owl:NamedIndividual ,
+                                                    <https://www.w3.org/TR/owl-ref/DataTypeProperty> ;
+                                           rdf:comment "The relationship between a thing and any set of coordinates (x,y,z)."@en ;
+                                           rdf:label "Coordinates (x,y,z) of a point"@en ;
+                                           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasDepth
+<https://example.com/terms#hasDepth> rdf:type owl:NamedIndividual ,
+                                              <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                     <http://qudt.org/schema/qudt/ucumCode> "m" ;
+                                     rdf:comment "The relationship between a a thing and its depth. The depth is always measured internally. If applied to a non-rectanglular shaped room, assume a bounding box depth."@en ;
+                                     rdf:label "Depth"@en ;
+                                     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasDistance
+<https://example.com/terms#hasDistance> rdf:type owl:NamedIndividual ,
+                                                 <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                        <http://qudt.org/schema/qudt/ucumCode> "m" ;
+                                        rdf:comment "The relationship between any measured/simulated distance and a thing/geometry. The unit is defined as meters."@en ;
+                                        rdf:label "Distance"@en ;
+                                        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasFloorArea
+<https://example.com/terms#hasFloorArea> rdf:type owl:NamedIndividual ,
+                                                  <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                         rdf:label "Internal floor area"@en ;
+                                         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasHeight
+<https://example.com/terms#hasHeight> rdf:type owl:NamedIndividual ,
+                                               <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                      <http://qudt.org/schema/qudt/ucumCode> "m" ;
+                                      rdf:comment "The relationshiip between a thing and it's height. The height is always measured internally. If applied to a non-rectanglular shaped room, assume a bounding box height."@en ;
+                                      rdf:label "Height"@en ;
+                                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasMeasure
+<https://example.com/terms#hasMeasure> rdf:type owl:NamedIndividual ,
+                                                <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                       rdf:comment "The relationship between a simulated result and any physical/simulated measure."@en ;
+                                       rdf:label "Measure"@en ;
+                                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasOrientation
+<https://example.com/terms#hasOrientation> rdf:type owl:NamedIndividual ,
+                                                    <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                           <http://qudt.org/schema/qudt/ucumCode> "deg" ;
+                                           rdf:comment "The relationship between a thing and its corresponding orientation. The orientation is given in degrees."@en ;
+                                           rdf:label "Orientation"@en ;
+                                           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" ;
+                                           <https://example.com/terms#standardUnit> "deg" .
+
+
+###  https://example.com/terms#hasRoomCenterPoint
+<https://example.com/terms#hasRoomCenterPoint> rdf:type owl:NamedIndividual ,
+                                                        <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                               rdf:comment "The relationship between a room instance and its centerpoint. The center point should be given in cartesian coordinates."@en ;
+                                               rdf:label "Center point of room (cartesian)"@en ;
+                                               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasRoomType
+<https://example.com/terms#hasRoomType> rdf:type owl:NamedIndividual ,
+                                                 <https://www.w3.org/TR/owl-ref/DataTypeProperty> ;
+                                        rdf:label "has room type"@en ;
+                                        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasSpeckle
+<https://example.com/terms#hasSpeckle> rdf:type owl:NamedIndividual ,
+                                                <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                       rdf:label "Speckle object"@en ;
+                                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasSurface
+<https://example.com/terms#hasSurface> rdf:type owl:NamedIndividual ,
+                                                <https://www.w3.org/TR/owl-ref/ObjectProperty> ;
+                                       rdf:label "An indoor surface"@en .
+
+
+###  https://example.com/terms#hasTestSurface
+<https://example.com/terms#hasTestSurface> rdf:type owl:NamedIndividual ,
+                                                    <https://www.w3.org/TR/owl-ref/DataTypeProperty> ;
+                                           rdf:comment "The relationship between a test surface and its simulated result."@en ;
+                                           rdf:label "Test surface"@en ;
+                                           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasVolume
+<https://example.com/terms#hasVolume> rdf:type owl:NamedIndividual ,
+                                               <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                      <http://qudt.org/schema/qudt/ucumCode> "m^3" ;
+                                      rdf:comment "The relationship between any measured/simulated volume and the geometry. The unit is defined as cubic metres."@en ;
+                                      rdf:label "Volume"@en ;
+                                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasWFR
+<https://example.com/terms#hasWFR> rdf:type owl:NamedIndividual ,
+                                            <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                   rdf:label "has window floor ratio (WFR)"@en ;
+                                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasWallCenterPoint
+<https://example.com/terms#hasWallCenterPoint> rdf:type owl:NamedIndividual ,
+                                                        <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                               rdf:comment "The relationship between a wall and is centre point (x,y,z)."@en ;
+                                               rdf:label "Center point of wall"@en ;
+                                               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#hasWidth
+<https://example.com/terms#hasWidth> rdf:type owl:NamedIndividual ,
+                                              <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                     <http://qudt.org/schema/qudt/ucumCode> "m" ;
+                                     rdf:comment "The relationship between a thing and its width. The width is always measured internally.  If applied to a non-rectanglular shaped room, assume a bounding box width."@en ;
+                                     rdf:label "Width"@en ;
+                                     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#maximumSimulatedValue
+<https://example.com/terms#maximumSimulatedValue> rdf:type owl:NamedIndividual ,
+                                                           <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                                  rdf:label "Maximum simulated result"@en .
+
+
+###  https://example.com/terms#minimumSimulatedValue
+<https://example.com/terms#minimumSimulatedValue> rdf:type owl:NamedIndividual ,
+                                                           <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                                  rdf:label "Minimum simulated result"@en .
+
+
+###  https://example.com/terms#simulatedBy
+<https://example.com/terms#simulatedBy> rdf:type owl:NamedIndividual ,
+                                                 <https://www.w3.org/TR/owl-ref/ObjectProperty> ;
+                                        rdf:label "Relationship between simulationist and result"@en ;
+                                        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#simulatedResult
+<https://example.com/terms#simulatedResult> rdf:type owl:NamedIndividual ,
+                                                     <https://www.w3.org/TR/owl-ref/DatatypeProperty> ;
+                                            rdf:label "Relationship between result instance and result"@en ;
+                                            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://example.com/terms#simulatedRoom
+<https://example.com/terms#simulatedRoom> rdf:type owl:NamedIndividual ,
+                                                   <https://www.w3.org/TR/owl-ref/ObjectProperty> ;
+                                          rdf:comment "The relationship between the simulated room and the result instance."@en ;
+                                          rdf:label "Simulated room"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://example.com/terms#RoomType> rdf:comment "RoomType is used to define any room geometry, and its characteristic features. This can be any word, in a string. (Some examples of roomtypes could be: deep, standard, wide, tall, round, etc.)."@en .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

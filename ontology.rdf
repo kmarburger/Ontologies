@@ -1,0 +1,553 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="https://example.com/terms#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/ucumCode -->
+
+
+    <AnnotationProperty rdf:about="http://qudt.org/schema/qudt/ucumCode"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#comment -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#comment"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#label -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#label"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- https://example.com/terms#standardUnit -->
+
+
+    <AnnotationProperty rdf:about="https://example.com/terms#standardUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.w3.org/TR/owl-ref/Class -->
+
+
+    <Class rdf:about="https://www.w3.org/TR/owl-ref/Class"/>
+    
+
+
+    <!-- https://www.w3.org/TR/owl-ref/DataTypeProperty -->
+
+
+    <Class rdf:about="https://www.w3.org/TR/owl-ref/DataTypeProperty"/>
+    
+
+
+    <!-- https://www.w3.org/TR/owl-ref/DatatypeProperty -->
+
+
+    <Class rdf:about="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+    
+
+
+    <!-- https://www.w3.org/TR/owl-ref/ObjectProperty -->
+
+
+    <Class rdf:about="https://www.w3.org/TR/owl-ref/ObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://example.com/terms#BoundaryCondition -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#BoundaryCondition">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:comment xml:lang="en">A boundary condition instance should represent a measureable value that is applied to a simulation as a boundary condition.</rdf:comment>
+        <rdf:label xml:lang="en">Boundary Condition</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#Context -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#Context">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:comment xml:lang="en">Context should be a generic model of any relevant surrounding geometry (these can be repsresented as speckle objects).</rdf:comment>
+        <rdf:label xml:lang="en">Context Geometry</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#Depth -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#Depth">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:comment xml:lang="en">Depth represents a simulated depth. the depth should be given in metres.  It is always measured internally. It can represent the depth of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box depth.</rdf:comment>
+        <rdf:label xml:lang="en">Depth</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#Distance -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#Distance">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:comment xml:lang="en">Distance represents any simulated distance, given in metres. The distance can be used in many ways in relation to simulations.</rdf:comment>
+        <rdf:label xml:lang="en">Distance</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#Height -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#Height">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:comment xml:lang="en">The rsot:Height class represents any height measured in relation to a simulated result or geomtry. The height should be given in metres.  It is always measured internally. It can represent the height of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box height.</rdf:comment>
+        <rdf:label xml:lang="en">Height</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#Measure -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#Measure">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:comment xml:lang="en">Measure represents any measureable value. No unit is assigned, this can be done separately.</rdf:comment>
+        <rdf:label xml:lang="en">Measure</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#Orientation -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#Orientation">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:label xml:lang="en">Orientation</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#Result -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#Result">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:comment xml:lang="en">The simulated result. A simulated value, that can be assigned any unit.</rdf:comment>
+        <rdf:label xml:lang="en">Result</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#RoomCenterPoint -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#RoomCenterPoint">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:label xml:lang="en">Room center point</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#SpeckleObject -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#SpeckleObject">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:comment xml:lang="en">Speckle object can be used to define any URL to a speckle stream (object). The object is undefined, it can be any geometric shape.</rdf:comment>
+        <rdf:label xml:lang="en">Speckle Object</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#Surface -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#Surface">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:label xml:lang="en">A surface</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#TestSurface -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#TestSurface">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:label xml:lang="en">Test surface</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#WFR -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#WFR">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:comment xml:lang="en">The window floor ratio, calculated by dividing a window area (glazing area) with the internal floor area. The value is a percentage/ratio representing physical measurements.</rdf:comment>
+        <rdf:label xml:lang="en">Window floor ratio</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#Width -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#Width">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/Class"/>
+        <rdf:comment xml:lang="en">Width represents a simulated width. The width should be given in metres. It is always measured internally. It can represent the width of an element, room or building. If applied to a non-rectanglular shaped room, assume a bounding box width.</rdf:comment>
+        <rdf:label xml:lang="en">Width</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasBoundaryCondition -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasBoundaryCondition">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DataTypeProperty"/>
+        <rdf:comment xml:lang="en">The relationship between a result and a boundary condition.</rdf:comment>
+        <rdf:label xml:lang="en">Boundary condition</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasContext -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasContext">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <rdf:label xml:lang="en">Context geometry</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasCoordinates -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasCoordinates">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DataTypeProperty"/>
+        <rdf:comment xml:lang="en">The relationship between a thing and any set of coordinates (x,y,z).</rdf:comment>
+        <rdf:label xml:lang="en">Coordinates (x,y,z) of a point</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasDepth -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasDepth">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <qudt:ucumCode>m</qudt:ucumCode>
+        <rdf:comment xml:lang="en">The relationship between a a thing and its depth. The depth is always measured internally. If applied to a non-rectanglular shaped room, assume a bounding box depth.</rdf:comment>
+        <rdf:label xml:lang="en">Depth</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasDistance -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasDistance">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <qudt:ucumCode>m</qudt:ucumCode>
+        <rdf:comment xml:lang="en">The relationship between any measured/simulated distance and a thing/geometry. The unit is defined as meters.</rdf:comment>
+        <rdf:label xml:lang="en">Distance</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasFloorArea -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasFloorArea">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <rdf:label xml:lang="en">Internal floor area</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasHeight -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasHeight">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <qudt:ucumCode>m</qudt:ucumCode>
+        <rdf:comment xml:lang="en">The relationshiip between a thing and it&apos;s height. The height is always measured internally. If applied to a non-rectanglular shaped room, assume a bounding box height.</rdf:comment>
+        <rdf:label xml:lang="en">Height</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasMeasure -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasMeasure">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <rdf:comment xml:lang="en">The relationship between a simulated result and any physical/simulated measure.</rdf:comment>
+        <rdf:label xml:lang="en">Measure</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasOrientation -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasOrientation">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <qudt:ucumCode>deg</qudt:ucumCode>
+        <rdf:comment xml:lang="en">The relationship between a thing and its corresponding orientation. The orientation is given in degrees.</rdf:comment>
+        <rdf:label xml:lang="en">Orientation</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+        <terms:standardUnit>deg</terms:standardUnit>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasRoomCenterPoint -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasRoomCenterPoint">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <rdf:comment xml:lang="en">The relationship between a room instance and its centerpoint. The center point should be given in cartesian coordinates.</rdf:comment>
+        <rdf:label xml:lang="en">Center point of room (cartesian)</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasRoomType -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasRoomType">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DataTypeProperty"/>
+        <rdf:label xml:lang="en">has room type</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasSpeckle -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasSpeckle">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <rdf:label xml:lang="en">Speckle object</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasSurface -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasSurface">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/ObjectProperty"/>
+        <rdf:label xml:lang="en">An indoor surface</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasTestSurface -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasTestSurface">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DataTypeProperty"/>
+        <rdf:comment xml:lang="en">The relationship between a test surface and its simulated result.</rdf:comment>
+        <rdf:label xml:lang="en">Test surface</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasVolume -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasVolume">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <qudt:ucumCode>m^3</qudt:ucumCode>
+        <rdf:comment xml:lang="en">The relationship between any measured/simulated volume and the geometry. The unit is defined as cubic metres.</rdf:comment>
+        <rdf:label xml:lang="en">Volume</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasWFR -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasWFR">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <rdf:label xml:lang="en">has window floor ratio (WFR)</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasWallCenterPoint -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasWallCenterPoint">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <rdf:comment xml:lang="en">The relationship between a wall and is centre point (x,y,z).</rdf:comment>
+        <rdf:label xml:lang="en">Center point of wall</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#hasWidth -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#hasWidth">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <qudt:ucumCode>m</qudt:ucumCode>
+        <rdf:comment xml:lang="en">The relationship between a thing and its width. The width is always measured internally.  If applied to a non-rectanglular shaped room, assume a bounding box width.</rdf:comment>
+        <rdf:label xml:lang="en">Width</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#maximumSimulatedValue -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#maximumSimulatedValue">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <rdf:label xml:lang="en">Maximum simulated result</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#minimumSimulatedValue -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#minimumSimulatedValue">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <rdf:label xml:lang="en">Minimum simulated result</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#simulatedBy -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#simulatedBy">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/ObjectProperty"/>
+        <rdf:label xml:lang="en">Relationship between simulationist and result</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#simulatedResult -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#simulatedResult">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/DatatypeProperty"/>
+        <rdf:label xml:lang="en">Relationship between result instance and result</rdf:label>
+        <ns:term_status>stable</ns:term_status>
+    </NamedIndividual>
+    
+
+
+    <!-- https://example.com/terms#simulatedRoom -->
+
+
+    <NamedIndividual rdf:about="https://example.com/terms#simulatedRoom">
+        <rdf:type rdf:resource="https://www.w3.org/TR/owl-ref/ObjectProperty"/>
+        <rdf:comment xml:lang="en">The relationship between the simulated room and the result instance.</rdf:comment>
+        <rdf:label xml:lang="en">Simulated room</rdf:label>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://example.com/terms#RoomType">
+        <rdf:comment xml:lang="en">RoomType is used to define any room geometry, and its characteristic features. This can be any word, in a string. (Some examples of roomtypes could be: deep, standard, wide, tall, round, etc.).</rdf:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+
