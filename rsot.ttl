@@ -138,7 +138,7 @@ rsot:hasWFR a owl:DatatypeProperty;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasRoomType a owl:DataTypeProperty ;
+rsot:hasRoomType a owl:DatatypeProperty ;
     rdfs:subPropertyOf omg:hasGeometry ;
     rdfs:label "has room type"@en ;
     rdfs:range xsd:string ;
@@ -244,7 +244,7 @@ rsot:hasWallCenterPoint a owl:DatatypeProperty ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasTestSurface a owl:DataTypeProperty ;
+rsot:hasTestSurface a owl:DatatypeProperty ;
     rdfs:subPropertyOf rsot:Measure ;
     rdfs:domainIncludes
         rsot:Result ;
@@ -252,7 +252,7 @@ rsot:hasTestSurface a owl:DataTypeProperty ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasCoordinates a owl:DataTypeProperty ;
+rsot:hasCoordinates a owl:DatatypeProperty ;
     rdfs:subPropertyOf cco:hasPoint ;
     rdfs:label "Coordinates (x,y,z) of a point"@en ;
     rdfs:domainIncludes  
@@ -278,7 +278,7 @@ rsot:simulatedResult a owl:DatatypeProperty  ;
     vs:term_status "stable" ;
     rdfs:isDefinedBy rsot: .
 
-rsot:hasBoundaryCondition a owl:DataTypeProperty ;
+rsot:hasBoundaryCondition a owl:DatatypeProperty ;
     rdfs:subPropertyOf rsot:hasMeasure ;
     rdfs:label "Boundary condition"@en ;
     rdfs:domainIncludes
